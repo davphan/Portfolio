@@ -1,6 +1,13 @@
-h1 {
+h2 {
   border-bottom-style: solid;
   text-align: center;
+}
+
+img {
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 30px auto 30px auto;
 }
 
 footer {
