@@ -1,21 +1,28 @@
 "use strict";
 
+// constants
 const DEFAULT_PORT = 8000;
-const REQ_ERR = 400;
-const SERVER_ERR = 500;
 
+// modules
 const express = require("express");
-const multer = require("multer");
-const sqlite3 = require('sqlite3');
-const sqlite = require('sqlite');
-
+const bodyParser = require("body-parser");
+const db = require("./queries");
 const app = express();
 
-// POST request using urlencoded
-app.use(express.urlencoded({extended: true}));
+// middleware
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
-// POST request using JSON
-app.use(express.json());
+// routes
 
-// POST request using form-data
-app.use(multer().none());
+// get coursework
+app.get("/portfolio/:catagory", db.getCoursework);
+
+// listen port
+app.use(express.static("public"));
+const PORT = process.env.PORT || DEFAULT_PORT;
+app.listen(PORT);
