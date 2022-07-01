@@ -5,13 +5,24 @@
     "CSE 142 & CSE 143": "Java Programming"
   },
   "EE": {
-
+    "E E 215": "Intro to Electrical Engineering",
+    "ENGR 231": "Technical Communicatinos",
+    "E E 233": "Circuit Theory",
+    "E E 242": "Digital Signal Processing",
+    "E E 241": "Programming for Signal Processing"
   },
   "MS": {
-
+    "PHYS 121, 122, 123": "Physics Series",
+    "MATH 124, 125, 126": "Calculus Series",
+    "CHEM 237": "Organic Chemistry",
+    "MATH 207": "Differential Equations",
+    "MATH 208": "Linear Algebra & Matrices",
+    "MATH 224": "Multivariable Calculus"
   },
   "Others": {
-
+    "ENGL 111, 131": "Literature and Composition",
+    "AP Biology": "",
+    "AP Chemsitry": ""
   },
   "GPA": 3.84
 }
