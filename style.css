@@ -1,13 +1,23 @@
 h2 {
   border-bottom-style: solid;
   text-align: center;
+  padding-bottom: 10%;
 }
 
 img {
   display: block;
   box-sizing: border-box;
-  width: 50%;
+  width: 30%;
   margin: 30px auto 30px auto;
+}
+
+#sideimg {
+  width: 80%;
+}
+
+#home {
+  margin: 0;
+  margin-left: 20%;
 }
 
 footer {
@@ -18,4 +28,11 @@ footer {
 footer p {
   color: gray;
   padding: 10px;
+}
+
+#sticky {
+  top: 20%;
+  height: 70vh;
+  border-right-style: solid;
+  border-color: lightgray;
 }
