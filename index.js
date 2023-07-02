@@ -15,7 +15,7 @@
 
   async function fillInfo(section) {
     try {
-      let response = await fetch(`https://gpa0verkd.github.io/Portfolio/${section}.json`);
+      let response = await fetch(`https://davphan.github.io/Portfolio/${section}.json`);
       let jsonInfo = await response.json();
       const subjects = ['CS', 'EE', 'MS', 'Other'];
       subjects.forEach(tag => {

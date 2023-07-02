@@ -2,14 +2,23 @@
   "CS": {
     "CSE 142 & CSE 143": "Java Programming",
     "CSE 154": "Web Programming",
-    "CSE 373": "Data Structures and Algorithms"
+    "CSE 373": "Data Structures and Algorithms",
+    "CSE 347": "Intermediate Programming Concepts and Tools",
+    "E E 443": "Machine Learning for Signal Processing Applications"
   },
   "EE": {
     "E E 215": "Intro to Electrical Engineering",
     "ENGR 231": "Technical Communicatinos",
     "E E 233": "Circuit Theory",
     "E E 242": "Digital Signal Processing",
-    "E E 241": "Programming for Signal Processing"
+    "E E 241": "Programming for Signal Processing",
+    "E E 271": "Digital Circuits and Systems",
+    "E E 201": "Computer Hardware Skills",
+    "E E 280": "Semiconductors",
+    "E E 342": "Digital Signal Processing II",
+    "E E 442": "Digital Signal Processing III",
+    "E E 443": "Machine Learning for Signal Processing Applications",
+    "E E 419": "Computer-Communication Networks"
   },
   "MS": {
     "PHYS 121, 122, 123": "Physics Series",
@@ -17,11 +26,14 @@
     "CHEM 237": "Organic Chemistry",
     "MATH 207": "Differential Equations",
     "MATH 208": "Linear Algebra & Matrices",
-    "MATH 224": "Multivariable Calculus"
+    "MATH 224": "Multivariable Calculus",
+    "STAT 390": "Statistical Methods in Engineering and Science"
   },
   "Other": {
     "AP Chemsitry": "",
     "AP Biology": "",
-    "ENGL 111, 131": "Literature and Composition"
+    "ENGL 111, 131": "Literature and Composition",
+    "EDPSY 302": "Child Development and Learning",
+    "E E 393": "Advanced Technical Communications"
   }
 }
