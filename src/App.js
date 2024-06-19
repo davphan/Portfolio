@@ -9,7 +9,7 @@ import Education from './components/Education';
 import { BrowserRouter } from 'react-router-dom';
 
 const Body = styled.div`
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.secondary_light};
   width: 100%;
   height: 100%;
   overflow-x: hidden;

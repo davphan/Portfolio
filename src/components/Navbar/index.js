@@ -25,8 +25,6 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-
-  animation: ${navbarAnimation} 2s ease-in-out;
 `;
 
 const NavContainer = styled.div`
@@ -38,12 +36,13 @@ const NavContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
+  animation: ${navbarAnimation} 2s ease-in-out;
 `;
 
 const NavLogo = styled(LinkR)`
   color: ${({ theme }) => theme.secondary_light};
   width: 80%;
-  padding 0 6px;
+  padding: 0 6px;
   display: flex;
   justify-self: flex-start;
   cursor: pointer;
@@ -51,7 +50,7 @@ const NavLogo = styled(LinkR)`
   align-items: center;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.accent}
+    color: ${({ theme }) => theme.accent_light}
   }
   @media screen and (max-width: 640px) {
     padding: 0 0px;
@@ -78,7 +77,7 @@ const NavLink = styled.a`
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.accent}
+    color: ${({ theme }) => theme.accent_light}
   }
 `;
 
@@ -96,8 +95,8 @@ const ButtonContainer = styled.div`
 
 const NavButton = styled.button`
   background-color: transparent;
-  color: ${({ theme }) => theme.secondary_light};
-  border: 1.8px solid ${({ theme }) => theme.secondary_light};
+  color: ${({ theme }) => theme.accent_light};
+  border: 1.8px solid ${({ theme }) => theme.accent_light};
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -107,10 +106,10 @@ const NavButton = styled.button`
   font-weight: 500;
   cursor: pointer;
   height: 70%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   &:hover {
-    background-color: ${({ theme }) => theme.accent};
-    border: 1.8px solid ${({ theme }) => theme.accent};
+    background-color: ${({ theme }) => theme.accent_dark};
+    border: 1.8px solid ${({ theme }) => theme.accent_dark};
     color: ${({ theme }) => theme.secondary_light};
   }
 
@@ -178,7 +177,7 @@ const MobileMenu = styled.div`
     width: 100%;
     padding: 12px 40px 24px 40px;
     box-sizing: border-box;
-    background: ${({ theme }) => theme.primary_light};
+    background: ${({ theme }) => theme.primary_dark};
     animation: ${({ open }) => open ? mobileMenuIn : mobileMenuOut} 0.3s ease-in-out;
     animation-fill-mode: forwards;
     border-radius: 0 0 20px 20px;
@@ -187,13 +186,13 @@ const MobileMenu = styled.div`
 `;
 
 const MobileMenuLink = styled(LinkR)`
-  color: ${({ theme }) => theme.primary_dark};
+  color: ${({ theme }) => theme.secondary_light};
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-  color: ${({ theme }) => theme.secondary_light}};
+  color: ${({ theme }) => theme.accent}};
 `;
 
 export default function Navbar() {
