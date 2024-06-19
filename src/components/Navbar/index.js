@@ -1,11 +1,22 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { BsCpu } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 
+const navbarAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.primary_dark};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -14,9 +25,8 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-  }
+
+  animation: ${navbarAnimation} 2s ease-in-out;
 `;
 
 const NavContainer = styled.div`
@@ -31,7 +41,7 @@ const NavContainer = styled.div`
 `;
 
 const NavLogo = styled(LinkR)`
-  color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.secondary_light};
   width: 80%;
   padding 0 6px;
   display: flex;
@@ -41,7 +51,7 @@ const NavLogo = styled(LinkR)`
   align-items: center;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.white}
+    color: ${({ theme }) => theme.accent}
   }
   @media screen and (max-width: 640px) {
     padding: 0 0px;
@@ -62,13 +72,13 @@ const NavItems = styled.ul`
 `;
 
 const NavLink = styled.a`
-  color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.secondary_light};
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.white}
+    color: ${({ theme }) => theme.accent}
   }
 `;
 
@@ -86,8 +96,8 @@ const ButtonContainer = styled.div`
 
 const NavButton = styled.button`
   background-color: transparent;
-  color: ${({ theme }) => theme.secondary};
-  border: 1.8px solid ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.secondary_light};
+  border: 1.8px solid ${({ theme }) => theme.secondary_light};
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -99,8 +109,9 @@ const NavButton = styled.button`
   height: 70%;
   transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: ${({ theme }) => theme.secondary};
-    color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.accent};
+    border: 1.8px solid ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.secondary_light};
   }
 
   @media screen and (max-width: 640px) {
@@ -128,34 +139,61 @@ const MobileIcon = styled.div`
   }
 `;
 
+const mobileMenuIn = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+`;
+
+const mobileMenuOut = keyframes`
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+  }
+`;
+
 const MobileMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 100%;
-  padding: 12px 40px 24px 40px;
-  box-sizing: border-box;
-  background: ${({ theme }) => theme.primary};
-  transition: all 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  opacity: ${({ open }) => (open ? "1" : "0")};
-  z-index: ${({ open }) => (open ? "1" : "-1")};
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 12px 40px 24px 40px;
+    box-sizing: border-box;
+    background: ${({ theme }) => theme.primary_light};
+    animation: ${({ open }) => open ? mobileMenuIn : mobileMenuOut} 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 const MobileMenuLink = styled(LinkR)`
-  color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.primary_dark};
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-  color: ${({ theme }) => theme.white}};
+  color: ${({ theme }) => theme.secondary_light}};
 `;
 
 export default function Navbar() {
@@ -182,10 +220,10 @@ export default function Navbar() {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <NavButton>Github</NavButton>
+          <NavButton>GitHub</NavButton>
         </ButtonContainer>
       </NavContainer>
-      {open && <MobileMenu open={open}>
+      <MobileMenu open={open}>
         <MobileMenuLink
           href="#about"
           onClick={() => setOpen(!open)}
@@ -216,8 +254,8 @@ export default function Navbar() {
         >
           Education
         </MobileMenuLink>
-        <NavButton>Github</NavButton>
-      </MobileMenu>}
+        <NavButton>GitHub</NavButton>
+      </MobileMenu>
     </Nav>
   )
 }

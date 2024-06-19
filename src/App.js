@@ -2,7 +2,7 @@ import './App.css';
 import { styled, ThemeProvider } from 'styled-components';
 import Navbar from './components/Navbar';
 import { purpleTheme } from './utils/Themes';
-import IntroBanner from './components/IntroBanner';
+import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
@@ -35,7 +35,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Body>
-          <IntroBanner/>
+          <About/>
           <GradientBackground>
             <Skills/>
             <Experience/>
