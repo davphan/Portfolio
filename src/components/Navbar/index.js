@@ -95,8 +95,8 @@ const ButtonContainer = styled.div`
 
 const NavButton = styled.button`
   background-color: transparent;
-  color: ${({ theme }) => theme.accent_light};
-  border: 1.8px solid ${({ theme }) => theme.accent_light};
+  color: ${({ theme }) => theme.primary_light};
+  border: 1.8px solid ${({ theme }) => theme.primary_light};
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -108,9 +108,9 @@ const NavButton = styled.button`
   height: 70%;
   transition: all 0.15s ease-in-out;
   &:hover {
-    background-color: ${({ theme }) => theme.accent_dark};
-    border: 1.8px solid ${({ theme }) => theme.accent_dark};
-    color: ${({ theme }) => theme.secondary_light};
+    background-color: ${({ theme }) => theme.accent_light};
+    border: 1.8px solid ${({ theme }) => theme.accent_light};
+    color: ${({ theme }) => theme.primary_dark};
   }
 
   @media screen and (max-width: 640px) {
@@ -202,7 +202,7 @@ export default function Navbar() {
     <Nav>
       <NavContainer>
         <NavLogo to="/">
-          <BsCpu size={30}/> <Span>{open ? "Open!" : "Not Open..."}</Span>
+          <BsCpu size={30}/> <Span>David Phan: Portfolio</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars
