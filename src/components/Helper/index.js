@@ -8,6 +8,7 @@ export const SectionContainer = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding: 50px 0px;
 `;
 
 export const Wrapper = styled.div`
@@ -22,7 +23,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-weight: 42px;
+  font-size: 42px;
   font-weight: 600;
   text-align: center;
   margin-top: 12px;
