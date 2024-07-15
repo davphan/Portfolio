@@ -14,10 +14,13 @@ const SkillsContainer = styled.div`
 
 const SkillCard = styled.div`
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: ${({ theme }) => theme.primary_light};
   border: 0.1px solid ${({ theme }) => theme.accent_light};
   border-radius: 16px;
-  padding: 18px 36px;
+  padding: 18px 24px;
 
   @media screen and (max-width: 768px) {
     max-width: 400px;
@@ -33,16 +36,21 @@ const SkillCardTitle = styled.h2`
   font-size: 32px;
   font-weight: 600;
   color: ${({ theme }) => theme.secondary_light};
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
   text-align: center;
 `;
 
 const SkillList = styled.div`
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SkillItem = styled.div`

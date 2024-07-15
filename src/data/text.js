@@ -210,9 +210,53 @@ export const experience = [
   }
 ];
 
-export const projects = {
-
-};
+export const projects = [
+  {
+    id: 0,
+    title: "Example Software Project",
+    date: "May 2023 - June 2024",
+    description: "Lorem Ipsum",
+    image: "",
+    tags: ["Java", "Python"],
+    group: "software",
+    links: [
+      {
+        name: "Github",
+        url: "https://davphan.github.io/Portfolio/index.html"
+      }
+    ]
+  },
+  {
+    id: 1,
+    title: "Example Hardware Project",
+    date: "May 2023 - June 2024",
+    description: "Lorem Ipsum",
+    image: "",
+    tags: ["Java", "Python"],
+    group: "hardware",
+    links: [
+      {
+        name: "Github",
+        url: "https://davphan.github.io/Portfolio/index.html"
+      }
+    ]
+  },
+  {
+    id: 0,
+    title: "Example Other Project",
+    date: "May 2023 - June 2024",
+    description: "Lorem Ipsum",
+    image: "",
+    tags: ["Java", "Python"],
+    group: "other",
+    links: [
+      {
+        name: "Github",
+        url: "https://davphan.github.io/Portfolio/index.html"
+      }
+    ]
+  },
+];
 
 export const education = {
 

@@ -5,6 +5,7 @@ import { purpleTheme } from './utils/Themes';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Projects from './components/Projects';
 import Education from './components/Education';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -39,8 +40,9 @@ function App() {
           <GradientBackground>
             <Skills/>
             <Experience/>
-            <Education/>
           </GradientBackground>
+          <Projects/>
+          <Education/>
         </Body>
       </BrowserRouter>
     </ThemeProvider>
