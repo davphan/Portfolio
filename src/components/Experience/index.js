@@ -27,11 +27,11 @@ export default function Experience() {
       <Wrapper>
         <Title>Experience</Title>
         <Description>
-          Lorem Ipsum
+          {experience.description}
         </Description>
         <TimelineSection>
           <Timeline>
-            {experience.sort((a, b) => b.id - a.id).map((exp, index) => (
+            {experience.cards.sort((a, b) => b.id - a.id).map((exp, index) => (
               <TimelineItem>
                 <TimelineOppositeContent style={{flex: 0.12}}/>
                 <TimelineSeparator>

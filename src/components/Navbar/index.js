@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { BsCpu } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import { navbar } from "../../data/text";
 
 const navbarAnimation = keyframes`
   from {
@@ -93,19 +94,17 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const NavButton = styled.button`
+const NavButton = styled.a`
   background-color: transparent;
   color: ${({ theme }) => theme.primary_light};
   border: 1.8px solid ${({ theme }) => theme.primary_light};
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 20px;
+  border-radius: 24px;
+  padding: 8px 15px;
   font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
+  max-width: fit-content;
   cursor: pointer;
-  height: 70%;
   transition: all 0.15s ease-in-out;
   &:hover {
     background-color: ${({ theme }) => theme.accent_light};
@@ -219,7 +218,7 @@ export default function Navbar() {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <NavButton>GitHub</NavButton>
+          <NavButton href={navbar.github} target="_blank">GitHub</NavButton>
         </ButtonContainer>
       </NavContainer>
       <MobileMenu open={open}>
@@ -253,7 +252,7 @@ export default function Navbar() {
         >
           Education
         </MobileMenuLink>
-        <NavButton>GitHub</NavButton>
+        <NavButton href={navbar.github} target="_blank">GitHub</NavButton>
       </MobileMenu>
     </Nav>
   )

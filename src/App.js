@@ -14,6 +14,7 @@ const Body = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  overscroll-behavior: none;
 `;
 
 const GradientBackground = styled.div`

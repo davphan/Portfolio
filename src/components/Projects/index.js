@@ -20,14 +20,14 @@ export default function Projects() {
     <SectionContainer id="projects">
       <Wrapper>
         <Title>Projects</Title>
-        <Description>Lorem Ipsum</Description>
+        <Description>{projects.description}</Description>
         <ToggleBar buttons={categories} currentButton={currentCategory} setCurrentButton={setCurrentCategory}/>
         <CardContainer>
           {currentCategory === "ALL" &&
-            projects.map((project) => <ProjectCard project={project}/>)
+            projects.cards.map((project) => <ProjectCard project={project}/>)
           }
           {
-            projects
+            projects.cards
               .filter((item) => item.group === currentCategory.toLowerCase())
               .map((project) => (
                 <ProjectCard project={project}/>
