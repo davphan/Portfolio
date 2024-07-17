@@ -12,6 +12,12 @@ const CardContainer = styled.div`
   gap: 12px;
 `;
 
+/*
+ * TODO:
+ * - Create blog posts page and link projects to them
+ * - Expand project card on click
+ * - Add search filter for tags
+ */
 export default function Projects() {
   const categories = ["ALL", "SOFTWARE", "HARDWARE", "OTHER"];
   const [currentCategory, setCurrentCategory] = useState(categories[0]);

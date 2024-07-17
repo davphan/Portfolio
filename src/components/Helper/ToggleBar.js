@@ -3,10 +3,12 @@ import styled from "styled-components";
 
 const ToggleBarContainer = styled.div`
   position: relative;
+  width: fit-content;
 `;
 
 const ToggleGroup = styled.div`
   display: flex;
+  color: ${({ theme }) => theme.secondary_dark};
   border: 1.5px solid ${({ theme }) => theme.primary_light};
   font-size: 16px;
   border-radius: 20px;

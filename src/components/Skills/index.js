@@ -13,18 +13,13 @@ const SkillsContainer = styled.div`
 `;
 
 const SkillCard = styled.div`
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: ${({ theme }) => theme.primary_light};
-  border: 0.1px solid ${({ theme }) => theme.accent_light};
+  width: 450px;
   border-radius: 16px;
-  padding: 18px 24px;
+  /* border: 0.1px solid ${({ theme }) => theme.accent_light}; */
+  background-color: ${({ theme }) => theme.primary_light + 30};
 
   @media screen and (max-width: 768px) {
     max-width: 400px;
-    padding: 10px 36px;
   }
 
   @media screen and (max-width: 500px) {
@@ -32,10 +27,34 @@ const SkillCard = styled.div`
   }
 `;
 
+const SkillCardGradient = styled.div`
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(38.73deg,
+      rgba(204, 0, 187, 0.15) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 289, 0) 50%,
+      rgba(0, 70, 289, 0.15) 100%
+    );
+  border-radius: 16px;
+  padding: 18px 24px;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 36px;
+  }
+`;
+
 const SkillCardTitle = styled.h2`
   font-size: 32px;
   font-weight: 600;
-  color: ${({ theme }) => theme.secondary_light};
+  color: ${({ theme }) => theme.secondary_dark};
   margin: 10px 0 20px 0;
   text-align: center;
 `;
@@ -59,17 +78,16 @@ const SkillItem = styled.div`
   gap: 8px;
   justify-content: center;
   font-size: 16px;
-  color: ${({ theme }) => theme.secondary_light};
+  color: ${({ theme }) => theme.secondary_dark};
+  background-color: ${({ theme }) => theme.primary_light + 60};
   border-radius: 12px;
-  border: 1px solid ${({ theme }) => theme.secondary_light};
   padding: 12px 16px;
   font-weight: 400;
 
   transition: all 0.1s ease-in-out;
   &:hover {
-    font-size: 110%;
+    transform: scale(1.1, 1.1);
     color: ${({ theme }) => theme.accent_light};
-    border-color: ${({ theme }) => theme.accent_light};
   }
 
   @media screen and (max-width: 768px) {
@@ -92,15 +110,17 @@ export default function Skills() {
         <SkillsContainer>
           {skills.cards.map((card) => (
             <SkillCard>
-              <SkillCardTitle>{card.title}</SkillCardTitle>
-              <SkillList>
-                {card.skills.map((skill) => (
-                  <SkillItem>
-                    {skill.image}
-                    {skill.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
+              <SkillCardGradient>
+                <SkillCardTitle>{card.title}</SkillCardTitle>
+                <SkillList>
+                  {card.skills.map((skill) => (
+                    <SkillItem>
+                      {skill.image}
+                      {skill.name}
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </SkillCardGradient>
             </SkillCard>
           ))}
         </SkillsContainer>

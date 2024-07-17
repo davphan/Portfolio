@@ -184,7 +184,7 @@ const MobileMenu = styled.div`
   }
 `;
 
-const MobileMenuLink = styled(LinkR)`
+const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.secondary_light};
   font-weight: 500;
   cursor: pointer;
