@@ -145,6 +145,7 @@ const Subtitle = styled.div`
 `;
 
 const ResumeButton = styled.a`
+  position: relative;
   appearance: button;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -165,6 +166,7 @@ const ResumeButton = styled.a`
   background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   box-shadow: 20px 20px 60px ${({ theme }) => theme.black}, 20px 20px 60px ${({ theme }) => theme.black};
   z-index: 1;
+
   &:hover {
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;

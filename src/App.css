@@ -43,6 +43,7 @@ html {
 
 body {
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body::-webkit-scrollbar {

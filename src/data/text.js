@@ -279,16 +279,6 @@ export const education = {
   coursework: {
     cs: [
       {
-        series: "",
-        courses: [
-          {
-            code: "",
-            year: "",
-            quarter: "",
-          },
-        ]
-      },
-      {
         series: "Introductory Computer Programming",
         courses: [
           {

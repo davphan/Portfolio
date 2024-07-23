@@ -4,17 +4,16 @@ import { SectionContainer, Wrapper, Title, Description } from "../Helper";
 import { education } from "../../data/text";
 import ToggleBar from "../Helper/ToggleBar";
 import YearView from "./YearView";
+import SubjectView from "./SubjectView";
+import ListView from "./ListView";
 
 const EducationContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 const Divider = styled.div`
@@ -30,17 +29,20 @@ const Divider = styled.div`
 `;
 
 const Overview = styled.div`
-  width: 20%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 40px;
+  align-items: center;
   padding: 30px;
-  /* position: sticky; */
 
   @media screen and (max-width: 768px) {
-    width: 100%;
+    flex-direction: column;
   }
+`;
+
+const LeftSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 const SchoolTitle = styled.div`
@@ -55,13 +57,13 @@ const SchoolTitle = styled.div`
 `;
 
 const SchoolImage = styled.img`
-  height: 100px;
+  width: 300px;
 `;
 
 const OverviewText = styled.ul`
   font-size: 16px;
   color: ${({ theme }) => theme.secondary_dark};
-  width: 100%;
+  margin: 0 auto;
 `;
 
 const OverviewElement = styled.li`
@@ -99,8 +101,10 @@ export default function Education() {
         <Description>{education.description}</Description>
         <EducationContainer>
           <Overview>
-            <SchoolTitle>{education.school}</SchoolTitle>
-            <SchoolImage src={education.img}/>
+            <LeftSection>
+              <SchoolTitle>{education.school}</SchoolTitle>
+              <SchoolImage src={education.img}/>
+            </LeftSection>
             <OverviewText>
               <OverviewElement><b>Major:</b> {education.major}</OverviewElement>
               <OverviewElement><b>GPA:</b> {education.gpa}</OverviewElement>
@@ -113,9 +117,9 @@ export default function Education() {
             <CourseworkTitle>Coursework</CourseworkTitle>
             <ToggleBar buttons={views} currentButton={currentView} setCurrentButton={setCurrentView}/>
             <ViewContainer>
-              {currentView === "Year" &&
-                <YearView/>
-              }
+              { currentView === "Year" && <YearView/> }
+              { currentView === "Subject" && <SubjectView/> }
+              { currentView === "List" && <ListView/> }
             </ViewContainer>
           </CourseworkContainer>
         </EducationContainer>
