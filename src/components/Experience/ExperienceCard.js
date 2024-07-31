@@ -42,6 +42,10 @@ const Card = styled.div`
     width: 450px;
   }
 
+  @media screen and (max-width: 480px) {
+    width: 280px;
+  }
+
   border: 1px solid ${({ theme }) => theme.accent_light};
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `;
@@ -151,8 +155,8 @@ export default function ExperienceCard({ experience }) {
         <Skills>
           <b>Skills:</b>
           <ItemWrapper>
-            {experience.skills.map((skill) => (
-              <Skill>{skill} |</Skill>
+            {experience.skills.map((skill, id) => (
+              <Skill key={id}>{skill} |</Skill>
             ))}
           </ItemWrapper>
         </Skills>

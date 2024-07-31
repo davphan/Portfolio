@@ -10,6 +10,10 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    gap: 20px;
+  }
 `;
 
 /*
@@ -30,13 +34,13 @@ export default function Projects() {
         <ToggleBar buttons={categories} currentButton={currentCategory} setCurrentButton={setCurrentCategory}/>
         <CardContainer>
           {currentCategory === "ALL" &&
-            projects.cards.map((project) => <ProjectCard project={project}/>)
+            projects.cards.map((project, id) => <ProjectCard key={id} project={project}/>)
           }
           {
             projects.cards
               .filter((item) => item.group === currentCategory.toLowerCase())
-              .map((project) => (
-                <ProjectCard project={project}/>
+              .map((project, id) => (
+                <ProjectCard key={id} project={project}/>
               ))
           }
         </CardContainer>

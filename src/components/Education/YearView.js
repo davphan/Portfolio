@@ -21,10 +21,6 @@ const YearTimeline = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
-
-  @media screen and (max-width: 768px) {
-
-  }
 `;
 
 const SideContainer = styled.div`
@@ -41,6 +37,10 @@ const YearTitle = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 1.1rem;
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const YearRange = styled.h2`
@@ -50,6 +50,10 @@ const YearRange = styled.h2`
 
   @media screen and (max-width: 768px) {
     font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -67,6 +71,11 @@ const QuarterHeader = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 1rem;
     padding: 0 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0;
   }
 `;
 
@@ -89,6 +98,11 @@ const ClassCode = styled.p`
 
   @media screen and (max-width: 768px) {
     font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+    padding: 0;
   }
 `;
 
@@ -117,7 +131,7 @@ export default function YearView() {
     <YearTimeline>
       <Timeline>
         {Object.keys(years).reverse().map((year, index) => (
-          <TimelineItem>
+          <TimelineItem key={index}>
             <TimelineOppositeContent style={{flex:0.3}}>
               <SideContainer>
                 <YearTitle>{year.charAt(0).toUpperCase() + year.slice(1)} Year</YearTitle>
@@ -130,14 +144,14 @@ export default function YearView() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <YearContainer>
-              {quarters.map((quarter) => (
-                <List>
+              {quarters.map((quarter, qId) => (
+                <List key={qId}>
                   <ListSubheader>
                     <QuarterHeader>{quarter}</QuarterHeader>
                   </ListSubheader>
                   <Divider/>
-                  {courseByYear[year][quarter.toLowerCase()].map((course) => (
-                    <ListItem>
+                  {courseByYear[year][quarter.toLowerCase()].map((course, cId) => (
+                    <ListItem key={cId}>
                       <ClassCode>{course.code}</ClassCode>
                     </ListItem>
                   ))}

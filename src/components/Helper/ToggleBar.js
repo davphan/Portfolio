@@ -19,6 +19,10 @@ const ToggleGroup = styled.div`
     font-size: 14px;
     border-radius: 16px;
   }
+
+  @media screen and (max-width: 480px) {
+    margin: 10px 0;
+  }
 `;
 
 const ToggleButton = styled.div`
@@ -48,6 +52,10 @@ const ToggleSelected = styled.div`
 
   @media screen and (max-width: 768px) {
     border-radius: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 10.8px;
   }
 `;
 
@@ -80,8 +88,8 @@ export default function ToggleBar({ buttons, currentButton, setCurrentButton }) 
   return (
     <ToggleBarContainer>
       <ToggleGroup ref={buttonGroupRef}>
-        {buttons.map((buttonName) => (
-          <ToggleButton ref={el => buttonRefs.current[buttonName] = el} onClick={() => setCurrentButton(buttonName)}>{buttonName}</ToggleButton>
+        {buttons.map((buttonName, id) => (
+          <ToggleButton key={id} ref={el => buttonRefs.current[buttonName] = el} onClick={() => setCurrentButton(buttonName)}>{buttonName}</ToggleButton>
         ))}
       </ToggleGroup>
       <ToggleSelected left={selectLeft} width={selectWidth} height={selectHeight}/>

@@ -7,6 +7,11 @@ const CardContainer = styled.div`
   border-radius: 12px;
   background-color: ${({ theme }) => theme.primary_light + 20};
   transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    width: 280px;
+    height: 280px;
+  }
 `;
 
 const CardGradient = styled.div`
@@ -40,12 +45,20 @@ const CardTitle = styled.div`
   font-size: 28px;
   font-weight: 400;
   color: ${({ theme }) => theme.secondary_dark};
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const CardDate = styled.div`
   font-size: 20px;
   font-weight: 200;
   color: ${({ theme }) => theme.secondary_dark};
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const CardBody = styled.div`
@@ -69,6 +82,10 @@ const TagList = styled.div`
   gap: 5px;
   font-size: 12px;
   padding-bottom: 5px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 10px;
+  }
 
   /*
   https://stackoverflow.com/questions/19230289/use-transition-on-webkit-scrollbar
@@ -100,6 +117,10 @@ const Tag = styled.div`
   border-radius: 20px;
   padding: 8px;
   color: ${({ theme }) => theme.primary_dark};
+
+  @media screen and (max-width: 768px) {
+    padding: 6px;
+  }
 `;
 
 const LinkList = styled.div`
@@ -107,6 +128,8 @@ const LinkList = styled.div`
 `;
 
 const ProjectLink = styled.a`
+  font-size: 1rem;
+  font-weight: 500;
   color: ${({ theme }) => theme.primary_dark};
   text-decoration: none;
   cursor: pointer;
@@ -114,6 +137,10 @@ const ProjectLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.accent_light};
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -128,13 +155,13 @@ export default function ProjectCard({ project }) {
         <CardBody>
           <CardDescription>{project.description}</CardDescription>
           <LinkList>
-            {project.links.map((link) => (
-              <ProjectLink src={link.url}>{link.name}</ProjectLink>
+            {project.links.map((link, id) => (
+              <ProjectLink key={id} src={link.url}>{link.name}</ProjectLink>
             ))}
           </LinkList>
           <TagList>
-            {project.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {project.tags.map((tag, tagId) => (
+              <Tag key={tagId}>{tag}</Tag>
             ))}
           </TagList>
         </CardBody>

@@ -1,4 +1,4 @@
-import React, { isValidElement } from "react";
+import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/text";
 import { SectionContainer, Wrapper, Title, Description} from "../Helper";
@@ -15,7 +15,6 @@ const SkillsContainer = styled.div`
 const SkillCard = styled.div`
   width: 450px;
   border-radius: 16px;
-  /* border: 0.1px solid ${({ theme }) => theme.accent_light}; */
   background-color: ${({ theme }) => theme.primary_light + 30};
 
   @media screen and (max-width: 768px) {
@@ -57,6 +56,10 @@ const SkillCardTitle = styled.h2`
   color: ${({ theme }) => theme.secondary_dark};
   margin: 10px 0 20px 0;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const SkillList = styled.div`
@@ -95,8 +98,7 @@ const SkillItem = styled.div`
     padding: 8px 12px;
   }
 
-  @media screen and (max-width: 500px) {
-    font-size: 14px;
+  @media screen and (max-width: 480px) {
     padding: 6px 12px;
   }
 `;
@@ -108,13 +110,13 @@ export default function Skills() {
         <Title>Skills</Title>
         <Description>{skills.description}</Description>
         <SkillsContainer>
-          {skills.cards.map((card) => (
-            <SkillCard>
+          {skills.cards.map((card, cardId) => (
+            <SkillCard key={cardId}>
               <SkillCardGradient>
                 <SkillCardTitle>{card.title}</SkillCardTitle>
                 <SkillList>
-                  {card.skills.map((skill) => (
-                    <SkillItem>
+                  {card.skills.map((skill, skillId) => (
+                    <SkillItem key={skillId}>
                       {skill.image}
                       {skill.name}
                     </SkillItem>

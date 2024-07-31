@@ -42,6 +42,7 @@ const Overview = styled.div`
 const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 `;
 

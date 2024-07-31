@@ -8,14 +8,26 @@ const ListViewContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-
   @media screen and (max-width: 768px) {
     margin: 0 70px;
   }
 `;
 
-const HeaderText = styled.div`
-  font-weight: 400;
+const PaginationContainer = styled.div`
+  @media screen and (max-width: 480px) {
+    width: 400px;
+  }
+`;
+
+const TableContainer = styled.div`
+  overflow-y: scroll;
+  height: 500px;
+
+  @media screen and (max-width: 480px) {
+    overflow-x: scroll;
+    width: 350px;
+    height: 400px;
+  }
 `;
 
 const years = {
@@ -79,56 +91,60 @@ export default function ListView() {
 
   return (
     <ListViewContainer>
-      <TablePagination
-        rowsPerPage={rowsPerPage}
-        rowsPerPageOptions={[10, 25, {label: "All", value: classList.length}]}
-        onRowsPerPageChange={(event) => {
-          setRowsPerPage(parseInt(event.target.value, 10));
-          setPage(0);
-        }}
-        count={classList.length}
-        page={page}
-        onPageChange={(_, newPage) => setPage(newPage)}
-        component="div"
-      />
-      <Table>
-        <TableHead>
-          <TableRow
-            key={"head"}
-          >
-          {headCells.map((headCell) => (
-            <TableCell sx={{color: theme.primary_dark, textWrap: "nowrap"}}>
-              <TableSortLabel
-                active={orderBy === headCell.id}
-                direction={order}
-                onClick={() => {
-                  orderBy === headCell.id
-                    ? setOrder(order === "asc" ? "desc" : "asc")
-                    : setOrder("desc");
-                  setOrderBy(headCell.id);
-                }}
-                hideSortIcon={true}
-              >
-              {headCell.label}
-              </TableSortLabel>
-            </TableCell>
+      <PaginationContainer>
+        <TablePagination
+          rowsPerPage={rowsPerPage}
+          rowsPerPageOptions={[10, 25, {label: "All", value: classList.length}]}
+          onRowsPerPageChange={(event) => {
+            setRowsPerPage(parseInt(event.target.value, 10));
+            setPage(0);
+          }}
+          count={classList.length}
+          page={page}
+          onPageChange={(_, newPage) => setPage(newPage)}
+          component="div"
+        />
+      </PaginationContainer>
+      <TableContainer>
+        <Table stickyHeader>
+          <TableHead>
+            <TableRow
+              key={"head"}
+            >
+            {headCells.map((headCell) => (
+              <TableCell sx={{color: theme.primary_dark, textWrap: "nowrap"}}>
+                <TableSortLabel
+                  active={orderBy === headCell.id}
+                  direction={order}
+                  onClick={() => {
+                    orderBy === headCell.id
+                      ? setOrder(order === "asc" ? "desc" : "asc")
+                      : setOrder("desc");
+                    setOrderBy(headCell.id);
+                  }}
+                  hideSortIcon={true}
+                >
+                {headCell.label}
+                </TableSortLabel>
+              </TableCell>
+            ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+          {visibleRows.map((row) => (
+            <TableRow
+              hover
+              key={row.id}
+            >
+              <TableCell>{row.code}</TableCell>
+              <TableCell>{row.series}</TableCell>
+              <TableCell>{row.quarter.charAt(0).toUpperCase() + row.quarter.slice(1)}, {capitalize(row.year)} Year</TableCell>
+              <TableCell>{row.details ? row.details : "-"}</TableCell>
+            </TableRow>
           ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-        {visibleRows.map((row) => (
-          <TableRow
-            hover
-            key={row.id}
-          >
-            <TableCell>{row.code}</TableCell>
-            <TableCell>{row.series}</TableCell>
-            <TableCell>{row.quarter.charAt(0).toUpperCase() + row.quarter.slice(1)}, {capitalize(row.year)} Year</TableCell>
-            <TableCell>{row.details ? row.details : "-"}</TableCell>
-          </TableRow>
-        ))}
-        </TableBody>
-      </Table>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </ListViewContainer>
   );
 }

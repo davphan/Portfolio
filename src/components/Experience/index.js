@@ -32,7 +32,7 @@ export default function Experience() {
         <TimelineSection>
           <Timeline>
             {experience.cards.sort((a, b) => b.id - a.id).map((exp, index) => (
-              <TimelineItem>
+              <TimelineItem key={index}>
                 <TimelineOppositeContent style={{flex: 0.12}}/>
                 <TimelineSeparator>
                   <TimelineDot variant="outlined" color="secondary"/>

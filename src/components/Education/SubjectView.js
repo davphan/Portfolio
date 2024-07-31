@@ -23,6 +23,11 @@ const SubjectContainer = styled.div`
 const SubjectTitle = styled.h1`
   font-size: 1.8rem;
   font-weight: 400;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const SeriesContainer = styled.div`
@@ -35,13 +40,13 @@ const SeriesContainer = styled.div`
 `;
 
 const SeriesList = styled.div`
-  width: 200px;
+  width: 150px;
   margin: 10px;
   border: 0.15px solid ${({ theme }) => theme.secondary_dark + 20};
   border-radius: 20px;
 `;
 
-const SeriesHeader = styled.h1`
+const SeriesHeader = styled.h2`
   font-size: 1rem;
   font-weight: 300;
   width: 100%;
@@ -51,6 +56,11 @@ const SeriesHeader = styled.h1`
   margin: 0;
   line-height: 1.5;
   vertical-align: middle;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 10px 0 30px 0;
+  }
 `;
 
 const ClassCode = styled.p`
@@ -68,6 +78,10 @@ const ClassCode = styled.p`
     background-color: ${({ theme }) => theme.secondary_dark + 10};
     transform: scale(1.1, 1.1);
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
