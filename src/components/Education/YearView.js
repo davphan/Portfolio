@@ -21,6 +21,10 @@ const YearTimeline = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  @media screen and (max-width: 768px) {
+
+  }
 `;
 
 const SideContainer = styled.div`
@@ -33,12 +37,20 @@ const YearTitle = styled.h1`
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const YearRange = styled.h2`
   font-size: 1rem;
   font-weight: 200;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const YearContainer = styled.div`
@@ -51,6 +63,11 @@ const QuarterHeader = styled.h1`
   color: ${({ theme }) => theme.primary_dark};
   padding: 0 50px;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 30px;
+  }
 `;
 
 const ClassCode = styled.p`
@@ -68,6 +85,10 @@ const ClassCode = styled.p`
     background-color: ${({ theme }) => theme.secondary_dark + 10};
     transform: scale(1.1, 1.1);
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 

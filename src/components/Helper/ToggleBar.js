@@ -66,14 +66,12 @@ export default function ToggleBar({ buttons, currentButton, setCurrentButton }) 
       setSelectWidth(buttonRefs.current[currentButton].getBoundingClientRect().width);
       setSelectHeight(buttonRefs.current[currentButton].getBoundingClientRect().height);
     } catch {
-      console.log("tried");
     }
   }
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       changeButtonSelect();
-      console.log("resized!")
     })
   });
 
