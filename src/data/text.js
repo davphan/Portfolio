@@ -20,7 +20,7 @@ export const about = {
     "Full-stack Developer",
   ],
   description: "A Software Development Engineer (SDE) with an degree in Electrical and Computer Engineering (ECE), specializing in full stack web development. My experiences span a wide engineering background including cloud application development, signal processing, and embedded systems.",
-  resume: "https://davphan.github.io/Portfolio/src/imgs/resume.pdf",
+  resume: "https://davphan.github.io/Portfolio/imgs/resume.pdf",
 };
 
 const iconSize=24;
