@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import { BsCpu } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { navbar } from "../../data/text";
@@ -76,7 +77,7 @@ const NavItems = styled.ul`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(NavHashLink)`
   color: ${({ theme }) => theme.secondary_light};
   font-weight: 500;
   cursor: pointer;
@@ -190,7 +191,7 @@ const MobileMenu = styled.div`
   }
 `;
 
-const MobileMenuLink = styled.a`
+const MobileMenuLink = styled(NavHashLink)`
   color: ${({ theme }) => theme.secondary_light};
   font-weight: 500;
   cursor: pointer;
@@ -208,7 +209,7 @@ export default function Navbar() {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="/">
+        <NavLogo to="/Portfolio">
           <BsCpu size={30}/> <Span>David Phan: Portfolio</Span>
         </NavLogo>
         <MobileIcon>
@@ -219,11 +220,11 @@ export default function Navbar() {
           />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink smooth to="/Portfolio#about">About</NavLink>
+          <NavLink smooth to="/Portfolio#skills">Skills</NavLink>
+          <NavLink smooth to="/Portfolio#experience">Experience</NavLink>
+          <NavLink smooth to="/Portfolio#projects">Projects</NavLink>
+          <NavLink smooth to="/Portfolio#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
           <NavButton href={navbar.github} target="_blank">GitHub</NavButton>
@@ -237,25 +238,25 @@ export default function Navbar() {
           About
         </MobileMenuLink>
         <MobileMenuLink
-          href="#skills"
+          to="/Portfolio#skills"
           onClick={() => setOpen(!open)}
         >
           Skills
         </MobileMenuLink>
         <MobileMenuLink
-          href="#experience"
+          to="/Portfolio#experience"
           onClick={() => setOpen(!open)}
         >
           Experience
         </MobileMenuLink>
         <MobileMenuLink
-          href="#projects"
+          to="/Portfolio#projects"
           onClick={() => setOpen(!open)}
         >
           Projects
         </MobileMenuLink>
         <MobileMenuLink
-          href="#education"
+          to="/Portfolio#education"
           onClick={() => setOpen(!open)}
         >
           Education

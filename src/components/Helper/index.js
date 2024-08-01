@@ -8,6 +8,7 @@ export const SectionContainer = styled.div`
   z-index: 1;
   align-items: center;
   padding: 50px 0px;
+  scroll-margin-top: 60px;
 
   @media screen and (max-width: 768px) {
     padding: 35px 0;
