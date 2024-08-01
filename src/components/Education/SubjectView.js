@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
@@ -98,19 +98,19 @@ export default function SubjectView() {
 
   return (
     <SubjectViewContainer>
-      {Object.keys(subjects).map((subject) => (
-        <SubjectContainer>
+      {Object.keys(subjects).map((subject, subjectId) => (
+        <SubjectContainer key={subjectId}>
           <SubjectTitle>{subjects[subject]}</SubjectTitle>
           <SeriesContainer>
-            {education.coursework[subject].map((series) => (
-              <SeriesList>
+            {education.coursework[subject].map((series, seriesId) => (
+              <SeriesList key={seriesId}>
                 <List sx={{paddingTop: "0"}}>
                   <ListSubheader sx={{borderRadius: "20px 20px 0 0"}}>
                     <SeriesHeader>{series.series}</SeriesHeader>
                   </ListSubheader>
                   <Divider/>
-                  {series.courses.map((course) => (
-                    <ListItem>
+                  {series.courses.map((course, courseId) => (
+                    <ListItem key={courseId}>
                       <ClassCode>{course.code}</ClassCode>
                     </ListItem>
                   ))}

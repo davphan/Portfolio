@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import styled, { keyframes, useTheme } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { BsCpu } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
-import { AiOutlinePlus } from "react-icons/ai";
 import { navbar } from "../../data/text";
 
 const navbarAnimation = keyframes`

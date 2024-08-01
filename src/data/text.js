@@ -19,7 +19,7 @@ export const about = {
     "Electrical and Computer Engineer",
     "Full-stack Developer",
   ],
-  description: "A Software Development Engineer (SDE) with an degree in Electrical and Computer Engineering (ECE), specializing in full stack web development. My experiences span a wide engineering background including cloud application development, signal processing, and embedded systems."
+  description: "A Software Development Engineer with an degree in Electrical and Computer Engineering, specializing in full stack web development. My experiences span a wide engineering background including cloud application development, signal processing, and embedded systems."
 };
 
 const iconSize=24;

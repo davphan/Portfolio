@@ -139,7 +139,7 @@ const ItemWrapper = styled.div`
 `;
 
 const Skill = styled.div`
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: 1.5px solid ${({ theme }) => theme.primary_dark};
   border-radius: 20px;
   padding: 8px;
