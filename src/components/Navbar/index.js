@@ -27,6 +27,11 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    width: 100%;
+  }
 `;
 
 const NavContainer = styled.div`

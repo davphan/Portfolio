@@ -40,10 +40,14 @@ const SeriesContainer = styled.div`
 `;
 
 const SeriesList = styled.div`
-  width: 150px;
+  width: 200px;
   margin: 10px;
   border: 0.15px solid ${({ theme }) => theme.secondary_dark + 20};
   border-radius: 20px;
+
+  @media screen and (max-width: 480px) {
+    width: 150px;
+  }
 `;
 
 const SeriesHeader = styled.h2`
@@ -57,7 +61,7 @@ const SeriesHeader = styled.h2`
   line-height: 1.5;
   vertical-align: middle;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 0.9rem;
     padding: 10px 0 30px 0;
   }

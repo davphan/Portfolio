@@ -221,22 +221,22 @@ export const projects = {
   cards: [
     {
       id: 0,
-      title: "Example Software Project",
-      date: "May 2023 - June 2024",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      title: "Hack UPC Hackathon",
+      date: "May 2021",
+      description: "Developed the front-end webpage for a facial recognition login system, Loginly. Together with a team of developers from around the world, we created and submited a complete login system solely off of facial recognition software.",
       image: "",
-      tags: ["Java", "Python", "foo", "bar", "baz", "hee", "hoo"],
+      tags: ["HTML", "CSS", "Bootstrap 4"],
       group: "software",
       links: [
         {
           name: "Github",
-          url: "https://davphan.github.io/Portfolio/index.html"
+          url: "https://github.com/EncryptEx/loginly"
         }
       ]
     },
     {
       id: 1,
-      title: "Example Hardware Project",
+      title: "ENGINE Capstone: ",
       date: "May 2023 - June 2024",
       description: "Lorem Ipsum",
       image: "",

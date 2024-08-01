@@ -19,6 +19,10 @@ const TimelineSection = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 40px;
+  }
 `;
 
 export default function Experience() {
