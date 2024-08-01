@@ -16,18 +16,6 @@ const EducationContainer = styled.div`
   align-items: center;
 `;
 
-const Divider = styled.div`
-  height: 100%;
-  width: 3px;
-  border-radius: 2px;
-  background-color: ${({ theme }) => theme.secondary_dark};
-
-  @media screen and (max-width: 768px) {
-    height: 3px;
-    width: 60%;
-  }
-`;
-
 const Overview = styled.div`
   display: flex;
   gap: 40px;

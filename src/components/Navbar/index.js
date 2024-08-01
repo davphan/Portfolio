@@ -78,7 +78,7 @@ const NavLink = styled.a`
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.accent_light}
+    color: ${({ theme }) => theme.accent_light};
   }
 `;
 
@@ -190,8 +190,10 @@ const MobileMenuLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+
   &:hover {
-  color: ${({ theme }) => theme.accent}};
+    color: ${({ theme }) => theme.accent_light}
+  }
 `;
 
 export default function Navbar() {

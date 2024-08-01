@@ -67,7 +67,7 @@ export default function ListView() {
           return x.replace(/\s/g,'') < y.replace(/\s/g,'') ? -1 : 1;
         }
       }).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage),
-    [order, orderBy, page, rowsPerPage]
+    [order, orderBy, page, rowsPerPage, classList]
   );
 
   const headCells = [

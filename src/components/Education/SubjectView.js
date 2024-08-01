@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { useTheme } from "styled-components";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -86,7 +86,6 @@ const ClassCode = styled.p`
 `;
 
 export default function SubjectView() {
-  const theme = useTheme();
   const subjects = {
     "cs": "Computer Science",
     "ece": "Electrical and Computer Engineering",

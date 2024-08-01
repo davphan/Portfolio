@@ -37,7 +37,6 @@ const Card = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 10px;
     gap: 8px;
     width: 450px;
   }
@@ -60,10 +59,10 @@ const Logo = styled.img`
   height: 50px;
   background-color: #000;
   border-radius: 10px;
-  margin-top: 4px;
+  margin-top: 8px;
 
   @media screen and (max-width: 768px) {
-    height: 40px;
+    height: 50px;
   }
 `;
 
@@ -76,30 +75,30 @@ const Body = styled.div`
 const Role = styled.div`
   font-size: 18px;
   font-weight: 600;
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.secondary_dark};
 
   @media screen and (max-width: 768px) {
-    font-size: 14px;
+    font-size: 1rem;
   }
 `;
 
 const Company = styled.div`
   font-size: 16px;
   font-weight: 500;
-  color: ${({ theme }) => theme.black + 99};
+  color: ${({ theme }) => theme.secondary_dark + 99};
 
   @media screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 0.9rem;
   }
 `;
 
 const Duration = styled.div`
   font-size: 14px;
   font-weight: 400;
-  color: ${({ theme }) => theme.black + 80};
+  color: ${({ theme }) => theme.secondary_dark + 80};
 
   @media screen and (max-width: 768px) {
-    font-size: 10px;
+    font-size: 0.8rem;
   }
 `;
 
@@ -107,19 +106,30 @@ const Description = styled.div`
   width: 100%;
   font-size: 15px;
   font-weight: 400;
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.secondary_dark};
   margin-bottom: 10px;
 
   @media screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 `;
 
 const Skills = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  margin-top: -10px;
+  margin-top: 10px;
+`;
+
+const SkillTitle = styled.div`
+  color: ${({ theme }) => theme.secondary_dark};
+  font-size: 1rem;
+  font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const ItemWrapper = styled.div`
@@ -129,12 +139,15 @@ const ItemWrapper = styled.div`
 `;
 
 const Skill = styled.div`
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.black};
+  font-size: 1rem;
+  border: 1.5px solid ${({ theme }) => theme.primary_dark};
+  border-radius: 20px;
+  padding: 8px;
+  color: ${({ theme }) => theme.primary_dark};
 
   @media screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 0.7rem;
+    padding: 6px
   }
 `;
 
@@ -151,12 +164,11 @@ export default function ExperienceCard({ experience }) {
       </Top>
       <Description>{experience.desc}</Description>
       {experience?.skills && <>
-        <br/>
         <Skills>
-          <b>Skills:</b>
+          <SkillTitle>Skills:</SkillTitle>
           <ItemWrapper>
             {experience.skills.map((skill, id) => (
-              <Skill key={id}>{skill} |</Skill>
+              <Skill key={id}>{skill}</Skill>
             ))}
           </ItemWrapper>
         </Skills>
