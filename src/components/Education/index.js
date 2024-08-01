@@ -101,7 +101,6 @@ export default function Education() {
               <OverviewElement><b>Honors:</b> {education.honors}</OverviewElement>
             </OverviewText>
           </Overview>
-          {/* <Divider/> */}
           <CourseworkContainer>
             <CourseworkTitle>Coursework</CourseworkTitle>
             <ToggleBar buttons={views} currentButton={currentView} setCurrentButton={setCurrentView}/>

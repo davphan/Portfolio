@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { BsCpu } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import { AiOutlinePlus } from "react-icons/ai";
 import { navbar } from "../../data/text";
 
 const navbarAnimation = keyframes`
@@ -127,13 +128,14 @@ const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 50%);
+    color: ${({ theme }) => theme.secondary_light};
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
+  }
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.accent_light};
   }
 `;
 

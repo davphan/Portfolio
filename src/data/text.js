@@ -20,7 +20,7 @@ export const about = {
     "Full-stack Developer",
   ],
   description: "A Software Development Engineer (SDE) with an degree in Electrical and Computer Engineering (ECE), specializing in full stack web development. My experiences span a wide engineering background including cloud application development, signal processing, and embedded systems.",
-  resume: "https://davphan.github.io/Portfolio/imgs/resume.pdf",
+  resume: "https://davphan.github.io/Portfolio/src/imgs/resume.pdf",
 };
 
 const iconSize=24;
@@ -269,7 +269,7 @@ export const projects = {
 };
 
 export const education = {
-  description: "Lorem Ipsum",
+  description: "Details on my college education and coursework.",
   school: "Unversity of Washington, Seattle",
   img: "https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/230/2023/04/02134421/Signature_Stacked_Purple_Hex.png",
   major: "Electrical and Computer Engineering",
