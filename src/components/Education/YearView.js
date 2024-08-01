@@ -39,7 +39,7 @@ const YearTitle = styled.h1`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -53,7 +53,7 @@ const YearRange = styled.h2`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -101,7 +101,7 @@ const ClassCode = styled.p`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 0;
   }
 `;

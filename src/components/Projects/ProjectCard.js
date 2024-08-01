@@ -7,6 +7,7 @@ const CardContainer = styled.div`
   border-radius: 12px;
   background-color: ${({ theme }) => theme.primary_light + 20};
   transition: all 0.3s ease-in-out;
+  position: relative;
 
   @media screen and (max-width: 768px) {
     width: 280px;
@@ -65,6 +66,13 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: absolute;
+  bottom: 15px;
+  width: 240px;
+
+  @media screen and (max-width: 768px) {
+    width: 220px;
+  }
 `;
 
 const CardDescription = styled.div`
@@ -117,6 +125,7 @@ const Tag = styled.div`
   border-radius: 20px;
   padding: 8px;
   color: ${({ theme }) => theme.primary_dark};
+  text-wrap: nowrap;
 
   @media screen and (max-width: 768px) {
     padding: 6px;
@@ -125,6 +134,7 @@ const Tag = styled.div`
 
 const LinkList = styled.div`
   display: flex;
+  gap: 6px;
 `;
 
 const ProjectLink = styled.a`
@@ -152,11 +162,11 @@ export default function ProjectCard({ project }) {
           <CardTitle>{project.title}</CardTitle>
           <CardDate>{project.date}</CardDate>
         </CardHeader>
+        <CardDescription>{project.description}</CardDescription>
         <CardBody>
-          <CardDescription>{project.description}</CardDescription>
           <LinkList>
             {project.links.map((link, id) => (
-              <ProjectLink key={id} src={link.url}>{link.name}</ProjectLink>
+              <ProjectLink key={id} href={link.url} target="_blank">{link.name}</ProjectLink>
             ))}
           </LinkList>
           <TagList>

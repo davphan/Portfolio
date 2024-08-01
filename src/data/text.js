@@ -236,31 +236,35 @@ export const projects = {
     },
     {
       id: 1,
-      title: "ENGINE Capstone: ",
-      date: "May 2023 - June 2024",
-      description: "Lorem Ipsum",
+      title: "ENGINE Capstone: Drone Detect",
+      date: "December 2024 - June 2024",
+      description: "For my ECE capstone, I led my team alongside ANPC to create a drone detection radar array using forward scatter and SDRs.",
       image: "",
-      tags: ["Java", "Python"],
+      tags: ["Python", "GNURadio", "SDRs", "Leadership", "Signal Processing", "Forward Scatter"],
       group: "hardware",
       links: [
         {
           name: "Github",
-          url: "https://davphan.github.io/Portfolio/index.html"
+          url: "https://github.com/coyspink/DroneDetect"
         }
       ]
     },
     {
-      id: 0,
-      title: "Example Other Project",
-      date: "May 2023 - June 2024",
-      description: "Lorem Ipsum",
+      id: 2,
+      title: "Music for Charity",
+      date: "June 2022 - June 2024",
+      description: "As an officer for Music for Charity at UW, I helped organize events such as Nursing Home Performances, member meetings, and orchestral concerts to bring together the UW community and raise money for communities in need.",
       image: "",
-      tags: ["Java", "Python"],
+      tags: ["Leadership", "Piano", "Charity", "Volunteering"],
       group: "other",
       links: [
         {
-          name: "Github",
-          url: "https://davphan.github.io/Portfolio/index.html"
+          name: "Website",
+          url: "https://muscharity.wordpress.com/"
+        },
+        {
+          name: "Youtube",
+          url: "https://www.youtube.com/@muscharityuw"
         }
       ]
     },
