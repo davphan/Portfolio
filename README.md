@@ -3,6 +3,39 @@
 Feel free to fork or copy the website template and replace the text in the `src/data/text.js` file
 to create your own website.
 
+## Development
+
+You'll need the following dependencies to develop this project:
+
+- NPM
+- TinyTex
+
+### Install NPM and packages
+
+First, install npm if you haven't done so already. Then run
+
+```
+npm install
+```
+
+### Install TinyTex
+
+The resume is build with Latex. The most light weight way to install a latex distro is with TinyTex. You can follow
+the [Tinytex installation guide](https://yihui.org/tinytex/), then run
+
+```
+tlmgr install collection-latexrecommended
+tlmgr install collection-fontsrecommended
+```
+
+for the latex dependencies needed to build. Now you can run
+
+```
+npm run build-resume
+```
+
+to compile the resume pdf.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,6 +66,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run build-resume`
+
+Builds the pdf file for the resume and puts the build files in the `build` folder.
 
 ### `npm run eject`
 

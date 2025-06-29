@@ -28,7 +28,8 @@
     "start": "react-scripts start",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build",
-    "build": "react-scripts build",
+    "build-resume": "latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/resume.tex",
+    "build": "react-scripts build && npm run build-resume",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
