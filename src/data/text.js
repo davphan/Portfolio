@@ -217,6 +217,22 @@ export const experience = {
         "Agile Methodology"
       ],
       doc: ""
+    },
+    {
+      id: 4,
+      img: amazonLogo,
+      role: "Software Development Engineer I",
+      company: "Amazon",
+      date: "September 2024 - Present",
+      desc: "Manage and develop Amazon's image upload pipeline, optimizing and storing billions of concurrent uploads daily while adhering to industry standard security best practices.",
+      skills: [
+        "AWS",
+        "Oncall",
+        "Internal Amazon CI/CD tools",
+        "Dependency Injection (Guice)",
+        "Agile Methodology"
+      ],
+      doc: ""
     }
   ]
 };
