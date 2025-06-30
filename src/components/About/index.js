@@ -226,7 +226,7 @@ export default function About() {
               </Span>
             </TextLoop>
             <Subtitle>{about.description}</Subtitle>
-            <ResumeButton href={require("../../imgs/resume.pdf")} target="_blank">Open Resume</ResumeButton>
+            <ResumeButton href={require("../../data/resume/resume.pdf")} target="_blank">Open Resume</ResumeButton>
           </AboutLeftContainer>
           <AboutRightContainer>
             <Image src={require("../../imgs/headshot.jpg")} alt="Headshot"/>
