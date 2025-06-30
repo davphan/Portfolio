@@ -1,17 +1,20 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.a5fa3f21.css",
-    "main.js": "/Portfolio/static/js/main.9af6f4b5.js",
+    "main.js": "/Portfolio/static/js/main.3a93fb07.js",
     "static/js/453.5858e738.chunk.js": "/Portfolio/static/js/453.5858e738.chunk.js",
     "static/media/headshot.jpg": "/Portfolio/static/media/headshot.bb05e20433b31e810fa7.jpg",
-    "static/media/resume.pdf": "/Portfolio/static/media/resume.f9cf02fafb5ce5071ce1.pdf",
+    "static/media/uw.png": "/Portfolio/static/media/uw.cba4e27c9c992f7dbe9d.png",
+    "static/media/resume.pdf": "/Portfolio/static/media/resume.00be100ff8948dd2a5cb.pdf",
+    "static/media/nfluxai.png": "/Portfolio/static/media/nfluxai.dd2a6dd813b0888e87cc.png",
+    "static/media/makeability-lab.png": "/Portfolio/static/media/makeability-lab.c8cc8a479c43254c5c77.png",
     "index.html": "/Portfolio/index.html",
     "main.a5fa3f21.css.map": "/Portfolio/static/css/main.a5fa3f21.css.map",
-    "main.9af6f4b5.js.map": "/Portfolio/static/js/main.9af6f4b5.js.map",
+    "main.3a93fb07.js.map": "/Portfolio/static/js/main.3a93fb07.js.map",
     "453.5858e738.chunk.js.map": "/Portfolio/static/js/453.5858e738.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5fa3f21.css",
-    "static/js/main.9af6f4b5.js"
+    "static/js/main.3a93fb07.js"
   ]
 }
