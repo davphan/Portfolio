@@ -36,6 +36,13 @@ npm run build-resume
 
 to compile the resume pdf.
 
+### Workflow
+
+1. Run `npm start` to start the web server locally.
+1. Make changes to the website. These are reflected in the local build automatically.
+1. Make changes to the `resume.tex` file, then build it using the `npm run build-resume` command.
+1. Merge into `main`, then run `npm run deploy` to deploy it to the actual live website.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -48,7 +55,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm deploy`
+### `npm run build-resume`
+
+Compile and build the `resume.tex` into the `resume.pdf` file.
+
+### `npm run deploy`
 
 Deploys the app to GitHub pages, publishing to and updating the live website.
 
