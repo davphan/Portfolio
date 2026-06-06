@@ -28,8 +28,10 @@
     "start": "react-scripts start",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build",
-    "build-resume": "latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/resume.tex",
-    "build": "npm run build-resume && react-scripts build",
+    "build-resume": "npm run resume-replace-date && latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/resume.tex",
+    "build-cv": "latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/cv.tex",
+    "build": "npm run build-resume && npm run build-cv && react-scripts build",
+    "resume-replace-date": "sed -i -E \"s/(Last updated in)(\\s+\\w+){2}/\\1 $(date +'%B %Y')/g\" src/data/resume/resume.tex",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
