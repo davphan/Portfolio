@@ -1,0 +1,744 @@
+// import { PythonOriginal, JavaOriginal, JavascriptOriginal, NodejsOriginal,
+//   ReactOriginal, LinuxOriginal, COriginal, CplusplusOriginal, Html5Original,
+//   Css3Original, TypescriptOriginal, BootstrapOriginal, JupyterOriginal,
+//   ScalaOriginal, PostgresqlOriginal, MongodbOriginal,
+//   AmazonwebservicesOriginalWordmark, AzureOriginal, GitOriginal,
+//   GithubactionsOriginal, DockerOriginal } from 'devicons-react';
+// import { GiBroadDagger } from 'react-icons/gi';
+// import { LiaCocktailSolid } from 'react-icons/lia';
+
+import { ProjectGroup, type CourseSeriesData, type ExperienceCardData, type ProjectsCardData, type SkillCardData, type SkillData } from "@/types/data";
+
+// import amazonLogo from '../imgs/amazon.png';
+// import makeabilityLogo from '../imgs/makeability-lab.png';
+// import uwLogo from '../imgs/uw.png';
+// import nFluxAiLogo from '../imgs/nfluxai.png'
+
+export const navbar = {
+  github: "https://github.com/davphan"
+};
+
+export const ABOUT = {
+  fname: "David",
+  lname: "Phan",
+  roles: [
+    "Software Development Engineer",
+    "Electrical and Computer Engineer",
+    "Full-stack Developer",
+  ],
+  description: "A Software Development Engineer with an degree in Electrical and Computer Engineering, specializing in full stack web development. My experiences span a wide engineering background including cloud application development, signal processing, and embedded systems."
+};
+
+// const iconSize=24;
+export const SKILLS = {
+  rust: {
+    name: "Rust"
+  },
+  java: {
+    name: "Java",
+  },
+  python: {
+    name: "Python",
+  },
+  typescript: {
+    name: "Typescript",
+  },
+  javascript: {
+    name: "Javascript",
+  },
+}
+
+export const SKILLS_SECTION: { description: string, cards: SkillCardData[] } = {
+  description: "Technologies, languages, frameworks, and more learned from my educational background, hands-on projects, and work experience.",
+  cards: [
+    {
+      title: "Programming Languages",
+      skills: [
+        SKILLS.rust,
+        SKILLS.java,
+        SKILLS.python,
+        SKILLS.typescript,
+        SKILLS.javascript,
+      ]
+    }
+//     {
+//       title: "Frontend",
+//       skills: [
+//         {
+//           name: "Javascript",
+//           image: <JavascriptOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "ReactJS",
+//           image: <ReactOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "HTML",
+//           image: <Html5Original size={iconSize}/>
+//         },
+//         {
+//           name: "CSS",
+//           image: <Css3Original size={iconSize}/>
+//         },
+//         {
+//           name: "Typescript",
+//           image: <TypescriptOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Bootstrap 5",
+//           image: <BootstrapOriginal size={iconSize}/>
+//         },
+//       ]
+//     },
+//     {
+//       title: "Backend",
+//       skills: [
+//         {
+//           name: "Python",
+//           image: <PythonOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Java",
+//           image: <JavaOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "NodeJS",
+//           image: <NodejsOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Bash/Command Line Scripting",
+//           image: <LinuxOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "C",
+//           image: <COriginal size={iconSize}/>
+//         },
+//         {
+//           name: "C++",
+//           image: <CplusplusOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Jupyter Notebook",
+//           image: <JupyterOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Scala",
+//           image: <ScalaOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Dagger DI",
+//           image: <GiBroadDagger size={iconSize}/>
+//         },
+//         {
+//           name: "Mockito",
+//           image: <LiaCocktailSolid size={iconSize}/>
+//         },
+//         {
+//           name: "PostgreSQL",
+//           image: <PostgresqlOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "MongoDB",
+//           image: <MongodbOriginal size={iconSize}/>
+//         },
+//       ]
+//     },
+//     {
+//       title: "Cloud, Workflow, and Distributed Systems",
+//       skills: [
+//         {
+//           name: "AWS",
+//           image: <AmazonwebservicesOriginalWordmark size={iconSize}/>
+//         },
+//         {
+//           name: "Azure",
+//           image: <AzureOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Git/GitHub",
+//           image: <GitOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Git Actions",
+//           image: <GithubactionsOriginal size={iconSize}/>
+//         },
+//         {
+//           name: "Docker/Docker Compose",
+//           image: <DockerOriginal size={iconSize}/>
+//         },
+//       ]
+//     }
+  ]
+};
+
+export const EXPERIENCE_SECTION: {
+  description: string,
+  cards: ExperienceCardData[]
+} = {
+  description: "Career, internship, and research experience timeline. The most recent experiences are at the top of the timeline.",
+  cards: [
+    {
+      // id: 0,
+      // img: nFluxAiLogo,
+      role: "Software Engineering Intern",
+      organization: "nFlux AI",
+      date: [[9, 2021], [12, 2021]],
+      description: "Automated ML training data processing by developing both SQL and noSQL database access algorithms and a CI/CD framework using Python and Git Actions. Developed frontend functionality testing procedures to analyze UI/UX components of company products.",
+      skills: [
+        SKILLS.python,
+        // "Python",
+        // "Git",
+        // "Git Actions",
+        // "Docker/Docker Compose",
+        // "PostgreSQL",
+        // "MongoDB",
+        // "Azure"
+      ],
+      // doc: ""
+    },
+    // {
+    //   id: 1,
+    //   // img: uwLogo,
+    //   role: "Undergraduate Researcher",
+    //   company: "UW Theberge (BCME) Lab",
+    //   date: "July 2022 - June 2024",
+    //   desc: "Developed a desktop application to automate data-analytics and image processing tasks, designed prototype microfluidic and biomedical devices using CAD software and embedded microcontroller circuits, and redesigned the lab website to optimize page rendering layout and scaling data.",
+    //   skills: [
+    //     "Python",
+    //     "tkinter",
+    //     "Image Processing",
+    //     "Wordpress",
+    //     "PostgreSQL",
+    //     "Solidworks",
+    //     "3D printing",
+    //     "Milling",
+    //     "Arduino/Embedded Programming",
+    //     "Analog circuit design"
+    //   ],
+    //   doc: ""
+    // },
+    // {
+    //   id: 2,
+    //   // img: makeabilityLogo,
+    //   role: "Software Development Engineer Intern",
+    //   company: "UW Project Sidewalk",
+    //   date: "March 2022 - June 2024",
+    //   desc: "Collaborated with a small team of developers to implement feature requests, debug issues, and maintain the Project Sidewalk website. These include API search algorithm optimizations, database redesign optimizations, and UI updates.",
+    //   skills: [
+    //     "Scala",
+    //     "PostgreSQL",
+    //     "Bootstrap",
+    //     "Play Framework",
+    //     "Silhouette Framework"
+    //   ],
+    //   doc: ""
+    // },
+    // {
+    //   id: 3,
+    //   // img: amazonLogo,
+    //   role: "Software Development Engineer Intern",
+    //   company: "Amazon",
+    //   date: "June 2023 - September 2023",
+    //   desc: "Spearheaded an internal full-stack ML dataset storage application for storing, searching, and sharing ML datasets across the company.",
+    //   skills: [
+    //     "AWS Lambda",
+    //     "AWS DynamoDB",
+    //     "AWS s3",
+    //     "AWS API Gateway",
+    //     "Internal Amazon CI/CD tools",
+    //     "Full stack web application design",
+    //     "Dependency Inject (Dagger DI)",
+    //     "Agile Methodology"
+    //   ],
+    //   doc: ""
+    // },
+    // {
+    //   id: 4,
+    //   // img: amazonLogo,
+    //   role: "Software Development Engineer I",
+    //   company: "Amazon",
+    //   date: "September 2024 - Present",
+    //   desc: "Manage and develop Amazon's image upload pipeline, optimizing and storing billions of concurrent uploads daily while adhering to industry standard security best practices.",
+    //   skills: [
+    //     "AWS",
+    //     "Oncall",
+    //     "Internal Amazon CI/CD tools",
+    //     "Dependency Injection (Guice)",
+    //     "Agile Methodology"
+    //   ],
+    //   doc: ""
+    // }
+  ]
+};
+
+export const PROJECTS_SECTION: {
+  description: string,
+  cards: ProjectsCardData[]
+} = {
+  description: "Various personal projects that have expanded my own skillsets. Sort by category or tags, click on each project to expand it for more details, and click on project links for more resources like blog posts or github repos.",
+  cards: [
+    // {
+    //   id: 0,
+    //   title: "Hack UPC Hackathon",
+    //   date: "May 2021",
+    //   description: "Developed the front-end webpage for a facial recognition login system, Loginly. Together with a team of developers from around the world, we created and submited a complete login system solely off of facial recognition software.",
+    //   image: "",
+    //   tags: ["HTML", "CSS", "Bootstrap 4"],
+    //   group: "software",
+    //   links: [
+    //     {
+    //       name: "Github",
+    //       url: "https://github.com/EncryptEx/loginly"
+    //     }
+    //   ]
+    // },
+    {
+      // id: 1,
+      title: "ENGINE Capstone: Drone Detect",
+      date: [[12, 2023], [6, 2024]],
+      // date: "December 2024 - June 2024",
+      description: "For my ECE capstone, I led my team alongside ANPC to create a drone detection radar array using forward scatter and SDRs.",
+      // image: "",
+      // tags: ["Python", "GNURadio", "SDRs", "Leadership", "Signal Processing", "Forward Scatter"],
+      skills: [SKILLS.python],
+      group: ProjectGroup.hardware,
+      links: [
+        {
+          text: "Github",
+          url: "https://github.com/coyspink/DroneDetect"
+        }
+      ]
+    },
+    // {
+    //   id: 2,
+    //   title: "Music for Charity",
+    //   date: "June 2022 - June 2024",
+    //   description: "As an officer for Music for Charity at UW, I helped organize events such as Nursing Home Performances, member meetings, and orchestral concerts to bring together the UW community and raise money for communities in need.",
+    //   image: "",
+    //   tags: ["Leadership", "Piano", "Charity", "Volunteering"],
+    //   group: "other",
+    //   links: [
+    //     {
+    //       name: "Website",
+    //       url: "https://muscharity.wordpress.com/"
+    //     },
+    //     {
+    //       name: "Youtube",
+    //       url: "https://www.youtube.com/@muscharityuw"
+    //     }
+    //   ]
+    // },
+  ]
+};
+
+export const EDUCATION_SECTION: {
+  description: string,
+  school: string,
+  img: string,
+  major: string,
+  gpa: string,
+  grad_date: string,
+  honors: string,
+  coursework: {
+    cs: CourseSeriesData[],
+    ece: CourseSeriesData[],
+    other: CourseSeriesData[],
+  }
+}= {
+  description: "Details on my college education and coursework.",
+  school: "Unversity of Washington, Seattle",
+  img: "https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/230/2023/04/02134421/Signature_Stacked_Purple_Hex.png",
+  major: "Electrical and Computer Engineering",
+  gpa: "3.87",
+  grad_date: "June 2024",
+  honors: "Cum Laude",
+  coursework: {
+    cs: [
+      {
+        series: "Introductory Computer Programming",
+        courses: [
+          {
+            code: "CSE 142",
+            year: "freshman",
+            quarter: "winter",
+          },
+          {
+            code: "CSE 143",
+            year: "freshman",
+            quarter: "spring",
+          },
+        ]
+      },
+      {
+        series: "Special Topics in CSE",
+        courses: [
+          {
+            code: "CSE 190",
+            year: "freshman",
+            quarter: "winter",
+            details: "Introductory programming lab"
+          },
+          {
+            code: "CSE 499",
+            year: "sophomore",
+            quarter: "spring",
+            details: "Makeability Lab: Project Sidewalk research credit"
+          },
+        ]
+      },
+      {
+        series: "Data Structures and Algorithms",
+        courses: [
+          {
+            code: "CSE 373",
+            year: "sophomore",
+            quarter: "autumn",
+          },
+          {
+            code: "CSE 374",
+            year: "junior",
+            quarter: "winter",
+            details: "C programming"
+          },
+        ]
+      },
+      {
+        series: "Web Programming",
+        courses: [
+          {
+            code: "CSE 154",
+            year: "sophomore",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Computer Networks",
+        courses: [
+          {
+            code: "E E 419",
+            year: "junior",
+            quarter: "spring",
+          },
+        ]
+      },
+      {
+        series: "Computer Architecture",
+        courses: [
+          {
+            code: "E E 469",
+            year: "senior",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Embedded Systems",
+        courses: [
+          {
+            code: "E E 474",
+            year: "senior",
+            quarter: "winter",
+          },
+        ]
+      },
+    ],
+    ece: [
+      {
+        series: "Engineering Exploration",
+        courses: [
+          {
+            code: "ENGR 101",
+            year: "freshman",
+            quarter: "autumn",
+          },
+          {
+            code: "GEN ST 199",
+            year: "freshman",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Calculus-Based Physics",
+        courses: [
+          {
+            code: "PHYS 121",
+            year: "freshman",
+            quarter: "autumn",
+            details: "Mechanics"
+          },
+          {
+            code: "PHYS 122",
+            year: "freshman",
+            quarter: "winter",
+            details: "Electromagnetics"
+          },
+          {
+            code: "PHYS 123",
+            year: "freshman",
+            quarter: "spring",
+            details: "Waves"
+          },
+        ]
+      },
+      {
+        series: "Technical Communications",
+        courses: [
+          {
+            code: "ENGR 231",
+            year: "freshman",
+            quarter: "spring",
+          },
+          {
+            code: "ENGR 393",
+            year: "junior",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Differential Equations",
+        courses: [
+          {
+            code: "MATH 307",
+            year: "freshman",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Matrix Algrebra",
+        courses: [
+          {
+            code: "MATH 208",
+            year: "sophomore",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Introduction to Electrical Engineering",
+        courses: [
+          {
+            code: "E E 215",
+            year: "sophomore",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Circuit Theory",
+        courses: [
+          {
+            code: "E E 233",
+            year: "sophomore",
+            quarter: "spring",
+          },
+        ]
+      },
+      {
+        series: "Signal Processing",
+        courses: [
+          {
+            code: "E E 241",
+            year: "sophomore",
+            quarter: "spring",
+          },
+          {
+            code: "E E 242",
+            year: "sophomore",
+            quarter: "spring",
+          },
+          {
+            code: "E E 342",
+            year: "junior",
+            quarter: "autumn"
+          },
+          {
+            code: "ENGR 442",
+            year: "junior",
+            quarter: "winter",
+          },
+          {
+            code: "ENGR 443",
+            year: "junior",
+            quarter: "spring",
+            details: "Machine learning with signal processing"
+          },
+        ]
+      },
+      {
+        series: "Special Topics in Engineering",
+        courses: [
+          {
+            code: "E E 498",
+            year: "sophomore",
+            quarter: "spring",
+            details: "Ethics in Engineering"
+          },
+          {
+            code: "E E 398",
+            year: "junior",
+            quarter: "spring",
+            details: "Career development"
+          },
+          {
+            code: "E E 496",
+            year: "senior",
+            quarter: "autumn",
+            details: "Systems Design"
+          },
+        ]
+      },
+      {
+        series: "Computer Hardware",
+        courses: [
+          {
+            code: "E E 201",
+            year: "junior",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Digital Circuits and Systems (VLSI)",
+        courses: [
+          {
+            code: "E E 271",
+            year: "junior",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Statistical Methods for Engineering",
+        courses: [
+          {
+            code: "STAT 390",
+            year: "junior",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Semiconductor Devices",
+        courses: [
+          {
+            code: "E E 280",
+            year: "junior",
+            quarter: "spring",
+          },
+          {
+            code: "E E 331",
+            year: "senior",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "ENGINE Capstone",
+        courses: [
+          {
+            code: "E E 497",
+            year: "senior",
+            quarter: "winter",
+          },
+          {
+            code: "E E 498",
+            year: "senior",
+            quarter: "spring",
+          },
+        ]
+      },
+    ],
+    other: [
+      {
+        series: "Organic Chemistry",
+        courses: [
+          {
+            code: "CHEM 237",
+            year: "freshman",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Calculus",
+        courses: [
+          {
+            code: "MATH 126",
+            year: "freshman",
+            quarter: "autumn",
+          },
+          {
+            code: "MATH 224",
+            year: "sophomore",
+            quarter: "winter",
+            details: "Advanced Multivariable Calculus"
+          },
+        ]
+      },
+      {
+        series: "History of Jazz",
+        courses: [
+          {
+            code: "MUSIC 131",
+            year: "freshman",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Global Reproductive Health",
+        courses: [
+          {
+            code: "G H 446",
+            year: "freshman",
+            quarter: "spring",
+          },
+        ]
+      },
+      {
+        series: "Survey of Music",
+        courses: [
+          {
+            code: "MUSIC 120",
+            year: "sophomore",
+            quarter: "autumn",
+          },
+        ]
+      },
+      {
+        series: "Child Development and Learning",
+        courses: [
+          {
+            code: "EDPSY 302",
+            year: "junior",
+            quarter: "winter",
+          },
+        ]
+      },
+      {
+        series: "Japanese",
+        courses: [
+          {
+            code: "JAPAN 101",
+            year: "senior",
+            quarter: "autumn",
+          },
+          {
+            code: "JAPAN 102",
+            year: "senior",
+            quarter: "winter",
+          },
+          {
+            code: "JAPAN 103",
+            year: "senior",
+            quarter: "spring",
+          },
+        ]
+      },
+    ]
+  }
+};
