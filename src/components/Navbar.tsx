@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="w-full grid grid-cols-3 items-center p-3">
       <DropdownMenu>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="w-fit right-5">
           <Button variant="outline">
             <Menu />
           </Button>
@@ -16,11 +16,11 @@ export default function Navbar() {
         <DropdownMenuContent>
           <DropdownMenuGroup>
             <DropdownMenuLabel>Portfolio Sections</DropdownMenuLabel>
-            <DropdownMenuItem>About</DropdownMenuItem>
-            <DropdownMenuItem>Skills</DropdownMenuItem>
-            <DropdownMenuItem>Experience</DropdownMenuItem>
-            <DropdownMenuItem>Projects</DropdownMenuItem>
-            <DropdownMenuItem>Education</DropdownMenuItem>
+            <DropdownMenuItem><a href="#about">About</a></DropdownMenuItem>
+            <DropdownMenuItem><a href="#skills">Skills</a></DropdownMenuItem>
+            <DropdownMenuItem><a href="#experience">Experience</a></DropdownMenuItem>
+            <DropdownMenuItem><a href="#projects">Projects</a></DropdownMenuItem>
+            <DropdownMenuItem><a href="#education">Education</a></DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <Separator orientation="vertical" />
         <h1>Portfolio</h1>
       </div>
-      <Button>Github</Button>
+      <Button className="w-fit absolute right-5" variant="secondary">Github</Button>
     </nav>
   );
 }
