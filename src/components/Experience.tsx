@@ -1,5 +1,5 @@
 import { EXPERIENCE_SECTION } from "@/data/text";
-import { SectionTitle } from "./typography/SectionTitle";
+import { SectionTitle } from "./typography";
 import type { ReactNode } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { printDateRange } from "@/util/dateUtil";

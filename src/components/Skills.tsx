@@ -1,5 +1,5 @@
 import { SKILLS_SECTION } from "@/data/text";
-import { SectionTitle } from "./typography/SectionTitle";
+import { SectionTitle } from "./typography";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import type { ReactNode } from "react";
 import { Badge } from "./ui/badge";

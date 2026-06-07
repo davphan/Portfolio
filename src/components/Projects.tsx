@@ -1,5 +1,5 @@
 import { PROJECTS_SECTION } from "@/data/text";
-import { SectionTitle } from "./typography/SectionTitle";
+import { SectionTitle } from "./typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { ProjectGroup } from "@/types/data";
 import type { ReactNode } from "react";

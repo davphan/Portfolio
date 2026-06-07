@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 export default function Navbar() {
 
   return (
-    <nav className="w-full grid grid-cols-3 items-center p-3">
+    <nav className="w-full grid grid-cols-[1fr_3fr_1fr] sticky top-0 items-center p-3 bg-background z-10">
       <DropdownMenu>
         <DropdownMenuTrigger className="w-fit right-5">
           <Button variant="outline">
@@ -30,10 +30,10 @@ export default function Navbar() {
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>
-      <div className="flex items-center gap-2">
-        <h1>David Phan</h1>
+      <div className="flex justify-center gap-2">
+        <h1 className="text-4xl">David Phan</h1>
         <Separator orientation="vertical" />
-        <h1>Portfolio</h1>
+        <h1 className="text-4xl">Portfolio</h1>
       </div>
       <Button className="w-fit absolute right-5" variant="secondary">Github</Button>
     </nav>

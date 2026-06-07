@@ -1,5 +1,5 @@
 import { EDUCATION_SECTION } from "@/data/text";
-import { SectionTitle } from "./typography/SectionTitle";
+import { SectionTitle } from "./typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 export default function Education() {
