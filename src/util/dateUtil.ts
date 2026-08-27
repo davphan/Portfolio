@@ -1,8 +1,12 @@
 import type { dateRange } from "@/types/data";
 
+export function isPresent(date: dateRange): boolean {
+  return !date[1][0] && !date[1][1];
+}
+
 export function printDateRange(date: dateRange): string {
   const startDate = `${getMonth(date[0][0])} ${date[0][1]}`;
-  const endDate = date[1][0] || date[1][1] ? `${getMonth(date[1][0])} ${date[1][1]}` : "Present";
+  const endDate = isPresent(date) ? "Present" : `${getMonth(date[1][0])} ${date[1][1]}`;
   return `${startDate} - ${endDate}`
 }
 

@@ -26,8 +26,8 @@ function Brand() {
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 w-full border-b border-border bg-background/80 backdrop-blur-sm">
-      <Container className="grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3">
+    <nav className="sticky top-0 z-30 w-full border-b border-border bg-background/80 backdrop-blur-sm">
+      <Container className="grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4">
         <div className="flex items-center">
           <div className="md:hidden">
             <DropdownMenu>

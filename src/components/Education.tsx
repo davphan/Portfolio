@@ -1,6 +1,6 @@
 import { EDUCATION_SECTION } from "@/data/text";
 import { Container } from "./layout";
-import { SectionTitle, Text } from "./typography";
+import { SectionHeader } from "./typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -115,10 +115,7 @@ function YearView() {
 export default function Education() {
   return (
     <Container id="education" className="flex flex-col items-center gap-10 py-16 md:py-24">
-      <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
-        <SectionTitle>Education</SectionTitle>
-        <Text>{EDUCATION_SECTION.description}</Text>
-      </div>
+      <SectionHeader title="Education" description={EDUCATION_SECTION.description} />
       <Card className="w-full max-w-3xl">
         <CardHeader>
           <div className="flex items-center gap-4">

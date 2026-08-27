@@ -1,6 +1,6 @@
 import { PROJECTS_SECTION } from "@/data/text";
 import { Container } from "./layout";
-import { SectionTitle, Text } from "./typography";
+import { SectionHeader } from "./typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { ProjectGroup, type ProjectsCardData } from "@/types/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
@@ -47,10 +47,7 @@ function ProjectCard({ data }: { data: ProjectsCardData }) {
 export default function Projects() {
   return (
     <Container id="projects" className="flex flex-col items-center gap-10 py-16 md:py-24">
-      <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
-        <SectionTitle>Projects</SectionTitle>
-        <Text>{PROJECTS_SECTION.description}</Text>
-      </div>
+      <SectionHeader title="Projects" description={PROJECTS_SECTION.description} />
       <Tabs defaultValue="All" className="w-full max-w-3xl items-center">
         <TabsList>
           <TabsTrigger value="All">All</TabsTrigger>

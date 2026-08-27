@@ -201,7 +201,26 @@ export const EXPERIENCE_SECTION: {
     {
       role: "Software Development Engineer II",
       organization: "Amazon",
-      date: [[9, 2024], [0, 0]],
+      date: [[7, 2026], [0, 0]],
+      img: amazonLogo,
+      description: [
+        "Redesigning the auth model for Amazon's internal media ingestion platform.",
+        "Enforcing automated security guardrails on ingestion, detection, and transformations on media content at the scale of 1B+ workflows a day.",
+        "Leading the team by organizing and coordinating task distribution across multiple projects, and mentoring interns to guide their development.",
+        "Modernizing legacy systems by migrating to OpenTelemetry for tracing and analytics data across distributed systems.",
+      ],
+      skills: [
+        SKILLS.aws,
+        { name: "Leadership" },
+        { name: "Security & Auth" },
+        { name: "OpenTelemetry" },
+        { name: "Distributed Systems" },
+      ],
+    },
+    {
+      role: "Software Development Engineer I",
+      organization: "Amazon",
+      date: [[9, 2024], [7, 2026]],
       img: amazonLogo,
       description: [
         "Operated Amazon's core Java/Guice based distributed media ingestion REST API service with regular oncall rotations and peak event preparation.",
@@ -209,6 +228,9 @@ export const EXPERIENCE_SECTION: {
         "Streamlined team operations by leading monthly bug bash sessions, onboarding new team members to our team oncall rotations, and migrating our team to new task management tooling.",
         "Migrated legacy bare-metal deployment infrastructure to CDK based AWS cloud infrastructure.",
         "Recognized as a top 5 leader within my org in pushing Amazon's leadership principles, leading to an accelerated promotion timeline.",
+        "Developed solutions, tests, and CI/CD workflows for media delivery optimizations using Java.",
+        "Refactored existing Amazon codebase to optimize media delivery systems.",
+        "Used the agile development methodology to organize team-wide tasks through regular sprints and scrums.",
       ],
       skills: [
         SKILLS.java,

@@ -1,6 +1,6 @@
 import { SKILLS_SECTION } from "@/data/text";
 import { Container } from "./layout";
-import { SectionTitle, Text } from "./typography";
+import { SectionHeader } from "./typography";
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/use-in-view";
 
@@ -16,10 +16,7 @@ export default function Skills() {
           inView ? "animate-in fade-in slide-in-from-bottom-6 duration-700" : "opacity-0"
         )}
       >
-        <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
-          <SectionTitle>Skills</SectionTitle>
-          <Text>{SKILLS_SECTION.description}</Text>
-        </div>
+        <SectionHeader title="Skills" description={SKILLS_SECTION.description} />
         <div className="flex w-full max-w-4xl flex-col gap-10">
           {SKILLS_SECTION.cards.map((data) => (
             <div key={data.title}>
