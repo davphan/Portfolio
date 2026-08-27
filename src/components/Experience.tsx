@@ -21,12 +21,12 @@ export default function Experience() {
                   <img
                     src={data.img}
                     alt={`${data.organization} logo`}
-                    className="size-12 shrink-0 rounded-md object-contain"
+                    className="size-16 shrink-0 rounded-md object-contain"
                   />
                 )}
                 <div className="flex flex-col gap-1">
-                  <CardTitle className="text-lg">{data.role}</CardTitle>
-                  <CardDescription className="flex flex-wrap gap-x-2 text-base">
+                  <CardTitle className="text-xl">{data.role}</CardTitle>
+                  <CardDescription className="flex flex-wrap gap-x-2 text-lg">
                     <span>{data.organization}</span>
                     <span aria-hidden>&middot;</span>
                     <span>{printDateRange(data.date)}</span>
@@ -35,10 +35,18 @@ export default function Experience() {
               </div>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
-              <p className="text-muted-foreground">{data.description}</p>
+              <ul className="list-disc space-y-2 pl-5 text-lg text-foreground">
+                {data.description.map((sentence) => (
+                  <li key={sentence}>{sentence}</li>
+                ))}
+              </ul>
               <div className="flex flex-wrap gap-2">
                 {data.skills.map((skill) => (
-                  <Badge key={skill.name} variant="secondary" className="gap-1.5">
+                  <Badge
+                    key={skill.name}
+                    variant="secondary"
+                    className="h-9 gap-1.5 rounded-full px-3 text-base [&>svg]:size-5!"
+                  >
                     {skill.icon}
                     {skill.name}
                   </Badge>

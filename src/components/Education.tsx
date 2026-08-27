@@ -74,7 +74,7 @@ function ListView() {
   return (
     <div className="flex flex-col divide-y divide-border">
       {courses.map((course) => (
-        <div key={`${course.category}-${course.code}`} className="flex flex-wrap items-center justify-between gap-2 py-3">
+        <div key={`${course.category}-${course.series}-${course.code}`} className="flex flex-wrap items-center justify-between gap-2 py-3">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="outline">{course.code}</Badge>
             <span>{course.series}</span>
@@ -101,7 +101,7 @@ function YearView() {
             {courses
               .filter((course) => course.year === year)
               .map((course) => (
-                <Badge key={`${course.category}-${course.code}`} variant="outline" title={course.series}>
+                <Badge key={`${course.category}-${course.series}-${course.code}`} variant="outline" title={course.series}>
                   {course.code}
                 </Badge>
               ))}

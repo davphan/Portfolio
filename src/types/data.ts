@@ -16,7 +16,7 @@ export type dateRange = [startDate: date, endDate: date]
 export interface ExperienceCardData {
   role: string,
   organization: string,
-  description: string,
+  description: string[],
   date: dateRange,
   skills: SkillData[],
   img?: string,

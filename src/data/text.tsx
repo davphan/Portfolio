@@ -187,7 +187,13 @@ export const EXPERIENCE_SECTION: {
       organization: "Amazon",
       date: [[9, 2024], [0, 0]],
       img: amazonLogo,
-      description: "Operate Amazon's core Java/Guice-based distributed media ingestion REST API service with regular oncall rotations and peak-event preparation. Modernized content ingestion by adding support for new media types and rebuilding ingestion components in Rust for lower latency and memory efficiency, cutting monthly incompatibility-related errors by 32%. Migrated legacy bare-metal deployment infrastructure to CDK-based AWS cloud infrastructure and streamlined team operations through bug bashes, onboarding, and new task-management tooling.",
+      description: [
+        "Operated Amazon's core Java/Guice based distributed media ingestion REST API service with regular oncall rotations and peak event preparation.",
+        "Modernized Amazon's content ingestion by adding support for modern media types, like HEIF, and rebuilding components of Amazon's content ingestion platform in Rust for lower latency and memory efficient file type operations, reducing monthly incompatibility ingestion related errors by 32%.",
+        "Streamlined team operations by leading monthly bug bash sessions, onboarding new team members to our team oncall rotations, and migrating our team to new task management tooling.",
+        "Migrated legacy bare-metal deployment infrastructure to CDK based AWS cloud infrastructure.",
+        "Recognized as a top 5 leader within my org in pushing Amazon's leadership principles, leading to an accelerated promotion timeline.",
+      ],
       skills: [
         SKILLS.java,
         SKILLS.rust,
@@ -203,7 +209,12 @@ export const EXPERIENCE_SECTION: {
       organization: "Amazon",
       date: [[6, 2023], [9, 2023]],
       img: amazonLogo,
-      description: "Spearheaded an internal full-stack application to help ML research teams process datasets, building a React/TypeScript front-end and a REST API on AWS API Gateway, Lambda, S3, and DynamoDB. Deployed through CI/CD pipelines using Git and internal Amazon tooling while collaborating with a team under Agile methodology.",
+      description: [
+        "Spearheaded an internal full-stack application project to aid ML research teams in processing datasets.",
+        "Designed and implemented both a React/Typescript front-end and a REST API using AWS API Gateway, Lambda, S3, DynamoDB, and Amazon internal tools.",
+        "Deployed applications through CI/CD frameworks using Git, internal pipeline tools, and AWS Pipelines.",
+        "Collaborated with a team of developers to generate and meet design goals using the Agile Methodology.",
+      ],
       skills: [
         SKILLS.reactjs,
         SKILLS.typescript,
@@ -220,7 +231,10 @@ export const EXPERIENCE_SECTION: {
       organization: "UW Project Sidewalk",
       date: [[3, 2022], [6, 2024]],
       img: makeabilityLogo,
-      description: "Maintained and updated the Project Sidewalk API and website, which tracks pedestrian accessibility issues in city infrastructure, collaborating with other developers to resolve tickets and implement feature requests across the Scala/PostgreSQL backend and frontend UI/UX.",
+      description: [
+        "Maintained and updated the Project Sidewalk API and website, which tracks and updates geographical information on pedestrian accessibility issues in current city infrastructure.",
+        "Collaborated with other software developers to resolve operational tickets and implement feature requests for both the Scala, PostgreSQL backend and frontend UI/UX.",
+      ],
       skills: [
         SKILLS.scala,
         SKILLS.postgresql,
@@ -234,7 +248,11 @@ export const EXPERIENCE_SECTION: {
       organization: "UW Theberge (BCME) Lab",
       date: [[7, 2022], [6, 2024]],
       img: uwLogo,
-      description: "Automated data-analytics and image-processing tasks with Python-based desktop applications, designed and prototyped microfluidic and biomedical devices using CAD software, 3D printing, milling, and microcontroller circuits, and built website features to represent lab research and grow study participation.",
+      description: [
+        "Automated data-analytics and image processing tasks by coding python-based desktop applications.",
+        "Designed and prototyped microfluidic and biomedical devices for research and medical purposes using CAD software, 3D printing and Milling devices, and microcontroller circuits.",
+        "Built and optimized website features to represent lab research and expand study group participation.",
+      ],
       skills: [
         SKILLS.python,
         { name: "Image Processing" },
@@ -251,7 +269,10 @@ export const EXPERIENCE_SECTION: {
       organization: "nFlux AI",
       date: [[9, 2021], [12, 2021]],
       img: nFluxAiLogo,
-      description: "Automated ML training data processing by developing both SQL and noSQL database access algorithms and a CI/CD framework using Python and Git Actions. Developed frontend functionality testing procedures to analyze UI/UX components of company products.",
+      description: [
+        "Automated ML training data processing by developing both SQL and noSQL database access algorithms and a CI/CD framework using Python and Git Actions.",
+        "Developed frontend functionality testing procedures to analyze UI/UX components of company products.",
+      ],
       skills: [
         SKILLS.python,
         SKILLS.git,
