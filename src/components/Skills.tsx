@@ -1,38 +1,47 @@
 import { SKILLS_SECTION } from "@/data/text";
 import { Container } from "./layout";
 import { SectionTitle, Text } from "./typography";
-import { Badge } from "./ui/badge";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 export default function Skills() {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   return (
-    <Container id="skills" className="flex flex-col items-center gap-10 py-16 md:py-24">
-      <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
-        <SectionTitle>Skills</SectionTitle>
-        <Text>{SKILLS_SECTION.description}</Text>
-      </div>
-      <div className="w-full max-w-3xl flex flex-col gap-8">
-        {SKILLS_SECTION.cards.map((data) => (
-          <div
-            key={data.title}
-            className="group rounded-r-lg border-l-4 border-primary py-3 pr-4 pl-6 transition-colors duration-200 hover:bg-muted/50"
-          >
-            <h3 className="text-xl md:text-2xl font-semibold uppercase tracking-wide text-muted-foreground transition-colors duration-200 group-hover:text-foreground">
-              {data.title}
-            </h3>
-            <div className="flex flex-wrap gap-3 mt-5">
-              {data.skills.map((skill) => (
-                <Badge
-                  key={skill.name}
-                  variant="secondary"
-                  className="h-11 gap-2 rounded-full px-4 text-base [&>svg]:size-6! transition-all duration-200 hover:scale-110 hover:bg-primary hover:text-primary-foreground"
-                >
-                  {skill.icon}
-                  {skill.name}
-                </Badge>
-              ))}
+    <Container id="skills" className="flex flex-col items-center py-16 md:py-24">
+      <div
+        ref={ref}
+        className={cn(
+          "flex w-full flex-col items-center gap-10",
+          inView ? "animate-in fade-in slide-in-from-bottom-6 duration-700" : "opacity-0"
+        )}
+      >
+        <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
+          <SectionTitle>Skills</SectionTitle>
+          <Text>{SKILLS_SECTION.description}</Text>
+        </div>
+        <div className="flex w-full max-w-4xl flex-col gap-10">
+          {SKILLS_SECTION.cards.map((data) => (
+            <div key={data.title}>
+              <h3 className="text-xl md:text-2xl font-semibold uppercase tracking-wide text-muted-foreground">
+                {data.title}
+              </h3>
+              <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+                {data.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center gap-2 rounded-lg p-3 text-center transition-all duration-200 hover:scale-105 hover:bg-muted/60"
+                  >
+                    <div className="flex size-9 items-center justify-center [&>svg]:size-9!">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm font-medium">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Container>
   );

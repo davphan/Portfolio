@@ -3,10 +3,11 @@ import { JavascriptOriginal, ReactOriginal, Html5Original, Css3Original,
   TypescriptOriginal, BootstrapOriginal, PythonOriginal, JavaOriginal,
   RustOriginal, NodejsOriginal, BashOriginal, COriginal, CplusplusOriginal,
   JupyterOriginal, ScalaOriginal, PostgresqlOriginal, MongodbOriginal,
-  AmazonwebservicesOriginalWordmark, AzureOriginal, GitOriginal,
+  DynamodbOriginal, AmazonwebservicesOriginalWordmark, AzureOriginal, GitOriginal,
   GithubactionsOriginal, DockerOriginal } from "devicons-react";
 import { GiBroadDagger } from "react-icons/gi";
 import { LiaCocktailSolid } from "react-icons/lia";
+import { SiOpensearch } from "react-icons/si";
 
 import amazonLogo from "@/assets/amazon.png";
 import makeabilityLogo from "@/assets/makeability-lab.png";
@@ -109,6 +110,14 @@ export const SKILLS = {
     name: "MongoDB",
     icon: <MongodbOriginal size={iconSize} />,
   },
+  dynamodb: {
+    name: "DynamoDB",
+    icon: <DynamodbOriginal size={iconSize} />,
+  },
+  opensearch: {
+    name: "OpenSearch",
+    icon: <SiOpensearch size={iconSize} />,
+  },
   aws: {
     name: "AWS",
     icon: <AmazonwebservicesOriginalWordmark size={iconSize} />,
@@ -135,36 +144,43 @@ export const SKILLS_SECTION: { description: string, cards: SkillCardData[] } = {
   description: "Technologies, languages, frameworks, and more learned from my educational background, hands-on projects, and work experience.",
   cards: [
     {
-      title: "Frontend",
+      title: "Languages",
       skills: [
-        SKILLS.javascript,
-        SKILLS.reactjs,
-        SKILLS.html,
-        SKILLS.css,
-        SKILLS.typescript,
-        SKILLS.bootstrap,
-      ]
-    },
-    {
-      title: "Backend",
-      skills: [
-        SKILLS.python,
-        SKILLS.java,
         SKILLS.rust,
-        SKILLS.nodejs,
+        SKILLS.java,
+        SKILLS.python,
+        SKILLS.typescript,
+        SKILLS.javascript,
+        SKILLS.scala,
         SKILLS.bash,
         SKILLS.c,
         SKILLS.cpp,
+      ]
+    },
+    {
+      title: "Frameworks & Tools",
+      skills: [
+        SKILLS.reactjs,
+        SKILLS.nodejs,
+        SKILLS.bootstrap,
+        SKILLS.html,
+        SKILLS.css,
         SKILLS.jupyter,
-        SKILLS.scala,
         SKILLS.daggerDi,
         SKILLS.mockito,
+      ]
+    },
+    {
+      title: "Data",
+      skills: [
+        SKILLS.dynamodb,
+        SKILLS.opensearch,
         SKILLS.postgresql,
         SKILLS.mongodb,
       ]
     },
     {
-      title: "Cloud, Workflow, and Distributed Systems",
+      title: "Cloud & DevOps",
       skills: [
         SKILLS.aws,
         SKILLS.azure,
