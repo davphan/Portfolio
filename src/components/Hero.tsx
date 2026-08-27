@@ -1,31 +1,35 @@
 import { ABOUT } from "@/data/text";
 import { Button } from "./ui/button";
+import { Container } from "./layout";
 import headshot from "@/assets/headshot.jpg";
-import { SectionTitle, Text } from "./typography";
+import resumePdf from "@/data/resume/resume.pdf?url";
+import { HeroTitle, Text } from "./typography";
 import TypewriterComponent from "typewriter-effect";
 
 export default function Hero() {
   return (
-    <div id="about" className="px-50 pb-10 ">
-      <div className="p-8">
-        <img className="max-w-100 max-h-100 rounded-full object-cover overflow-clip w-full h-full m-auto" src={headshot} alt="Headshot of David Phan"/>
+    <Container id="about" className="flex flex-col items-center gap-6 py-16 text-center md:py-24">
+      <img
+        className="size-40 rounded-full object-cover md:size-48"
+        src={headshot}
+        alt="Headshot of David Phan"
+      />
+      <HeroTitle>{ABOUT.fname} {ABOUT.lname}</HeroTitle>
+      <div className="text-2xl font-medium text-primary md:text-3xl">
+        <TypewriterComponent
+          options={{
+            strings: ABOUT.roles,
+            autoStart: true,
+            loop: true,
+            delay: 70,
+            deleteSpeed: 30,
+          }}
+        />
       </div>
-      <div className="flex flex-col justify-center items-center text-center gap-6">
-        <SectionTitle>{ABOUT.fname} {ABOUT.lname}</SectionTitle>
-        <div className="text-3xl text-chart-2">
-          <TypewriterComponent
-            options={{
-              strings: ABOUT.roles,
-              autoStart: true,
-              loop: true,
-              delay: 70,
-              deleteSpeed: 30,
-            }}
-          />
-        </div>
-        <Text>{ABOUT.description}</Text>
-        <Button className="w-fit text-3xl p-8 rounded-full">Open Resume</Button>
-      </div>
-    </div>
+      <Text>{ABOUT.description}</Text>
+      <Button size="lg" className="rounded-full" asChild>
+        <a href={resumePdf} target="_blank" rel="noreferrer">Open Resume</a>
+      </Button>
+    </Container>
   );
 }

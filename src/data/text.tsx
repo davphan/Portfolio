@@ -1,21 +1,23 @@
-// import { PythonOriginal, JavaOriginal, JavascriptOriginal, NodejsOriginal,
-//   ReactOriginal, LinuxOriginal, COriginal, CplusplusOriginal, Html5Original,
-//   Css3Original, TypescriptOriginal, BootstrapOriginal, JupyterOriginal,
-//   ScalaOriginal, PostgresqlOriginal, MongodbOriginal,
-//   AmazonwebservicesOriginalWordmark, AzureOriginal, GitOriginal,
-//   GithubactionsOriginal, DockerOriginal } from 'devicons-react';
-// import { GiBroadDagger } from 'react-icons/gi';
-// import { LiaCocktailSolid } from 'react-icons/lia';
+import { ProjectGroup, type CourseSeriesData, type ExperienceCardData, type ProjectsCardData, type SkillCardData } from "@/types/data";
+import { JavascriptOriginal, ReactOriginal, Html5Original, Css3Original,
+  TypescriptOriginal, BootstrapOriginal, PythonOriginal, JavaOriginal,
+  RustOriginal, NodejsOriginal, BashOriginal, COriginal, CplusplusOriginal,
+  JupyterOriginal, ScalaOriginal, PostgresqlOriginal, MongodbOriginal,
+  AmazonwebservicesOriginalWordmark, AzureOriginal, GitOriginal,
+  GithubactionsOriginal, DockerOriginal } from "devicons-react";
+import { GiBroadDagger } from "react-icons/gi";
+import { LiaCocktailSolid } from "react-icons/lia";
 
-import { ProjectGroup, type CourseSeriesData, type ExperienceCardData, type ProjectsCardData, type SkillCardData, type SkillData } from "@/types/data";
+import amazonLogo from "@/assets/amazon.png";
+import makeabilityLogo from "@/assets/makeability-lab.png";
+import uwLogo from "@/assets/uw.png";
+import nFluxAiLogo from "@/assets/nfluxai.png";
 
-// import amazonLogo from '../imgs/amazon.png';
-// import makeabilityLogo from '../imgs/makeability-lab.png';
-// import uwLogo from '../imgs/uw.png';
-// import nFluxAiLogo from '../imgs/nfluxai.png'
+const iconSize = 24;
 
 export const navbar = {
-  github: "https://github.com/davphan"
+  github: "https://github.com/davphan",
+  linkedin: "https://www.linkedin.com/in/dphan3/"
 };
 
 export const ABOUT = {
@@ -31,20 +33,101 @@ export const ABOUT = {
 
 // const iconSize=24;
 export const SKILLS = {
-  rust: {
-    name: "Rust"
+  javascript: {
+    name: "Javascript",
+    icon: <JavascriptOriginal size={iconSize} />,
   },
-  java: {
-    name: "Java",
+  reactjs: {
+    name: "ReactJS",
+    icon: <ReactOriginal size={iconSize} />,
   },
-  python: {
-    name: "Python",
+  html: {
+    name: "HTML",
+    icon: <Html5Original size={iconSize} />,
+  },
+  css: {
+    name: "CSS",
+    icon: <Css3Original size={iconSize} />,
   },
   typescript: {
     name: "Typescript",
+    icon: <TypescriptOriginal size={iconSize} />,
   },
-  javascript: {
-    name: "Javascript",
+  bootstrap: {
+    name: "Bootstrap",
+    icon: <BootstrapOriginal size={iconSize} />,
+  },
+  python: {
+    name: "Python",
+    icon: <PythonOriginal size={iconSize} />,
+  },
+  java: {
+    name: "Java",
+    icon: <JavaOriginal size={iconSize} />,
+  },
+  rust: {
+    name: "Rust",
+    icon: <RustOriginal size={iconSize} />,
+  },
+  nodejs: {
+    name: "NodeJS",
+    icon: <NodejsOriginal size={iconSize} />,
+  },
+  bash: {
+    name: "Bash/Command Line Scripting",
+    icon: <BashOriginal size={iconSize} />,
+  },
+  c: {
+    name: "C",
+    icon: <COriginal size={iconSize} />,
+  },
+  cpp: {
+    name: "C++",
+    icon: <CplusplusOriginal size={iconSize} />,
+  },
+  jupyter: {
+    name: "Jupyter Notebook",
+    icon: <JupyterOriginal size={iconSize} />,
+  },
+  scala: {
+    name: "Scala",
+    icon: <ScalaOriginal size={iconSize} />,
+  },
+  daggerDi: {
+    name: "Dagger DI",
+    icon: <GiBroadDagger size={iconSize} />,
+  },
+  mockito: {
+    name: "Mockito",
+    icon: <LiaCocktailSolid size={iconSize} />,
+  },
+  postgresql: {
+    name: "PostgreSQL",
+    icon: <PostgresqlOriginal size={iconSize} />,
+  },
+  mongodb: {
+    name: "MongoDB",
+    icon: <MongodbOriginal size={iconSize} />,
+  },
+  aws: {
+    name: "AWS",
+    icon: <AmazonwebservicesOriginalWordmark size={iconSize} />,
+  },
+  azure: {
+    name: "Azure",
+    icon: <AzureOriginal size={iconSize} />,
+  },
+  git: {
+    name: "Git/GitHub",
+    icon: <GitOriginal size={iconSize} />,
+  },
+  gitActions: {
+    name: "Git Actions",
+    icon: <GithubactionsOriginal size={iconSize} />,
+  },
+  docker: {
+    name: "Docker/Docker Compose",
+    icon: <DockerOriginal size={iconSize} />,
   },
 }
 
@@ -52,122 +135,44 @@ export const SKILLS_SECTION: { description: string, cards: SkillCardData[] } = {
   description: "Technologies, languages, frameworks, and more learned from my educational background, hands-on projects, and work experience.",
   cards: [
     {
-      title: "Programming Languages",
+      title: "Frontend",
       skills: [
-        SKILLS.rust,
-        SKILLS.java,
-        SKILLS.python,
-        SKILLS.typescript,
         SKILLS.javascript,
+        SKILLS.reactjs,
+        SKILLS.html,
+        SKILLS.css,
+        SKILLS.typescript,
+        SKILLS.bootstrap,
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        SKILLS.python,
+        SKILLS.java,
+        SKILLS.rust,
+        SKILLS.nodejs,
+        SKILLS.bash,
+        SKILLS.c,
+        SKILLS.cpp,
+        SKILLS.jupyter,
+        SKILLS.scala,
+        SKILLS.daggerDi,
+        SKILLS.mockito,
+        SKILLS.postgresql,
+        SKILLS.mongodb,
+      ]
+    },
+    {
+      title: "Cloud, Workflow, and Distributed Systems",
+      skills: [
+        SKILLS.aws,
+        SKILLS.azure,
+        SKILLS.git,
+        SKILLS.gitActions,
+        SKILLS.docker,
       ]
     }
-//     {
-//       title: "Frontend",
-//       skills: [
-//         {
-//           name: "Javascript",
-//           image: <JavascriptOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "ReactJS",
-//           image: <ReactOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "HTML",
-//           image: <Html5Original size={iconSize}/>
-//         },
-//         {
-//           name: "CSS",
-//           image: <Css3Original size={iconSize}/>
-//         },
-//         {
-//           name: "Typescript",
-//           image: <TypescriptOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Bootstrap 5",
-//           image: <BootstrapOriginal size={iconSize}/>
-//         },
-//       ]
-//     },
-//     {
-//       title: "Backend",
-//       skills: [
-//         {
-//           name: "Python",
-//           image: <PythonOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Java",
-//           image: <JavaOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "NodeJS",
-//           image: <NodejsOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Bash/Command Line Scripting",
-//           image: <LinuxOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "C",
-//           image: <COriginal size={iconSize}/>
-//         },
-//         {
-//           name: "C++",
-//           image: <CplusplusOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Jupyter Notebook",
-//           image: <JupyterOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Scala",
-//           image: <ScalaOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Dagger DI",
-//           image: <GiBroadDagger size={iconSize}/>
-//         },
-//         {
-//           name: "Mockito",
-//           image: <LiaCocktailSolid size={iconSize}/>
-//         },
-//         {
-//           name: "PostgreSQL",
-//           image: <PostgresqlOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "MongoDB",
-//           image: <MongodbOriginal size={iconSize}/>
-//         },
-//       ]
-//     },
-//     {
-//       title: "Cloud, Workflow, and Distributed Systems",
-//       skills: [
-//         {
-//           name: "AWS",
-//           image: <AmazonwebservicesOriginalWordmark size={iconSize}/>
-//         },
-//         {
-//           name: "Azure",
-//           image: <AzureOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Git/GitHub",
-//           image: <GitOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Git Actions",
-//           image: <GithubactionsOriginal size={iconSize}/>
-//         },
-//         {
-//           name: "Docker/Docker Compose",
-//           image: <DockerOriginal size={iconSize}/>
-//         },
-//       ]
-//     }
   ]
 };
 
@@ -178,96 +183,85 @@ export const EXPERIENCE_SECTION: {
   description: "Career, internship, and research experience timeline. The most recent experiences are at the top of the timeline.",
   cards: [
     {
-      // id: 0,
-      // img: nFluxAiLogo,
+      role: "Software Development Engineer II",
+      organization: "Amazon",
+      date: [[9, 2024], [0, 0]],
+      img: amazonLogo,
+      description: "Operate Amazon's core Java/Guice-based distributed media ingestion REST API service with regular oncall rotations and peak-event preparation. Modernized content ingestion by adding support for new media types and rebuilding ingestion components in Rust for lower latency and memory efficiency, cutting monthly incompatibility-related errors by 32%. Migrated legacy bare-metal deployment infrastructure to CDK-based AWS cloud infrastructure and streamlined team operations through bug bashes, onboarding, and new task-management tooling.",
+      skills: [
+        SKILLS.java,
+        SKILLS.rust,
+        SKILLS.aws,
+        { name: "Dependency Injection (Guice)" },
+        { name: "AWS CDK" },
+        { name: "Oncall" },
+        { name: "Agile Methodology" },
+      ],
+    },
+    {
+      role: "Software Development Engineer (SDE) I Intern",
+      organization: "Amazon",
+      date: [[6, 2023], [9, 2023]],
+      img: amazonLogo,
+      description: "Spearheaded an internal full-stack application to help ML research teams process datasets, building a React/TypeScript front-end and a REST API on AWS API Gateway, Lambda, S3, and DynamoDB. Deployed through CI/CD pipelines using Git and internal Amazon tooling while collaborating with a team under Agile methodology.",
+      skills: [
+        SKILLS.reactjs,
+        SKILLS.typescript,
+        { name: "AWS Lambda" },
+        { name: "AWS DynamoDB" },
+        { name: "AWS S3" },
+        { name: "AWS API Gateway" },
+        { name: "Internal Amazon CI/CD tools" },
+        { name: "Agile Methodology" },
+      ],
+    },
+    {
+      role: "Software Development Intern",
+      organization: "UW Project Sidewalk",
+      date: [[3, 2022], [6, 2024]],
+      img: makeabilityLogo,
+      description: "Maintained and updated the Project Sidewalk API and website, which tracks pedestrian accessibility issues in city infrastructure, collaborating with other developers to resolve tickets and implement feature requests across the Scala/PostgreSQL backend and frontend UI/UX.",
+      skills: [
+        SKILLS.scala,
+        SKILLS.postgresql,
+        SKILLS.bootstrap,
+        { name: "Play Framework" },
+        { name: "Silhouette Framework" },
+      ],
+    },
+    {
+      role: "Undergraduate Researcher",
+      organization: "UW Theberge (BCME) Lab",
+      date: [[7, 2022], [6, 2024]],
+      img: uwLogo,
+      description: "Automated data-analytics and image-processing tasks with Python-based desktop applications, designed and prototyped microfluidic and biomedical devices using CAD software, 3D printing, milling, and microcontroller circuits, and built website features to represent lab research and grow study participation.",
+      skills: [
+        SKILLS.python,
+        { name: "Image Processing" },
+        { name: "Solidworks" },
+        { name: "3D Printing" },
+        { name: "Milling" },
+        { name: "Arduino/Embedded Programming" },
+        { name: "Analog Circuit Design" },
+        { name: "Wordpress" },
+      ],
+    },
+    {
       role: "Software Engineering Intern",
       organization: "nFlux AI",
       date: [[9, 2021], [12, 2021]],
+      img: nFluxAiLogo,
       description: "Automated ML training data processing by developing both SQL and noSQL database access algorithms and a CI/CD framework using Python and Git Actions. Developed frontend functionality testing procedures to analyze UI/UX components of company products.",
       skills: [
         SKILLS.python,
-        // "Python",
-        // "Git",
-        // "Git Actions",
-        // "Docker/Docker Compose",
-        // "PostgreSQL",
-        // "MongoDB",
-        // "Azure"
+        SKILLS.git,
+        SKILLS.gitActions,
+        SKILLS.docker,
+        SKILLS.postgresql,
+        SKILLS.mongodb,
+        SKILLS.azure,
       ],
-      // doc: ""
     },
-    // {
-    //   id: 1,
-    //   // img: uwLogo,
-    //   role: "Undergraduate Researcher",
-    //   company: "UW Theberge (BCME) Lab",
-    //   date: "July 2022 - June 2024",
-    //   desc: "Developed a desktop application to automate data-analytics and image processing tasks, designed prototype microfluidic and biomedical devices using CAD software and embedded microcontroller circuits, and redesigned the lab website to optimize page rendering layout and scaling data.",
-    //   skills: [
-    //     "Python",
-    //     "tkinter",
-    //     "Image Processing",
-    //     "Wordpress",
-    //     "PostgreSQL",
-    //     "Solidworks",
-    //     "3D printing",
-    //     "Milling",
-    //     "Arduino/Embedded Programming",
-    //     "Analog circuit design"
-    //   ],
-    //   doc: ""
-    // },
-    // {
-    //   id: 2,
-    //   // img: makeabilityLogo,
-    //   role: "Software Development Engineer Intern",
-    //   company: "UW Project Sidewalk",
-    //   date: "March 2022 - June 2024",
-    //   desc: "Collaborated with a small team of developers to implement feature requests, debug issues, and maintain the Project Sidewalk website. These include API search algorithm optimizations, database redesign optimizations, and UI updates.",
-    //   skills: [
-    //     "Scala",
-    //     "PostgreSQL",
-    //     "Bootstrap",
-    //     "Play Framework",
-    //     "Silhouette Framework"
-    //   ],
-    //   doc: ""
-    // },
-    // {
-    //   id: 3,
-    //   // img: amazonLogo,
-    //   role: "Software Development Engineer Intern",
-    //   company: "Amazon",
-    //   date: "June 2023 - September 2023",
-    //   desc: "Spearheaded an internal full-stack ML dataset storage application for storing, searching, and sharing ML datasets across the company.",
-    //   skills: [
-    //     "AWS Lambda",
-    //     "AWS DynamoDB",
-    //     "AWS s3",
-    //     "AWS API Gateway",
-    //     "Internal Amazon CI/CD tools",
-    //     "Full stack web application design",
-    //     "Dependency Inject (Dagger DI)",
-    //     "Agile Methodology"
-    //   ],
-    //   doc: ""
-    // },
-    // {
-    //   id: 4,
-    //   // img: amazonLogo,
-    //   role: "Software Development Engineer I",
-    //   company: "Amazon",
-    //   date: "September 2024 - Present",
-    //   desc: "Manage and develop Amazon's image upload pipeline, optimizing and storing billions of concurrent uploads daily while adhering to industry standard security best practices.",
-    //   skills: [
-    //     "AWS",
-    //     "Oncall",
-    //     "Internal Amazon CI/CD tools",
-    //     "Dependency Injection (Guice)",
-    //     "Agile Methodology"
-    //   ],
-    //   doc: ""
-    // }
   ]
 };
 
@@ -277,30 +271,18 @@ export const PROJECTS_SECTION: {
 } = {
   description: "Various personal projects that have expanded my own skillsets. Sort by category or tags, click on each project to expand it for more details, and click on project links for more resources like blog posts or github repos.",
   cards: [
-    // {
-    //   id: 0,
-    //   title: "Hack UPC Hackathon",
-    //   date: "May 2021",
-    //   description: "Developed the front-end webpage for a facial recognition login system, Loginly. Together with a team of developers from around the world, we created and submited a complete login system solely off of facial recognition software.",
-    //   image: "",
-    //   tags: ["HTML", "CSS", "Bootstrap 4"],
-    //   group: "software",
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "https://github.com/EncryptEx/loginly"
-    //     }
-    //   ]
-    // },
     {
-      // id: 1,
       title: "ENGINE Capstone: Drone Detect",
       date: [[12, 2023], [6, 2024]],
-      // date: "December 2024 - June 2024",
       description: "For my ECE capstone, I led my team alongside ANPC to create a drone detection radar array using forward scatter and SDRs.",
-      // image: "",
-      // tags: ["Python", "GNURadio", "SDRs", "Leadership", "Signal Processing", "Forward Scatter"],
-      skills: [SKILLS.python],
+      skills: [
+        SKILLS.python,
+        { name: "GNURadio" },
+        { name: "SDRs" },
+        { name: "Leadership" },
+        { name: "Signal Processing" },
+        { name: "Forward Scatter" },
+      ],
       group: ProjectGroup.hardware,
       links: [
         {
@@ -309,25 +291,45 @@ export const PROJECTS_SECTION: {
         }
       ]
     },
-    // {
-    //   id: 2,
-    //   title: "Music for Charity",
-    //   date: "June 2022 - June 2024",
-    //   description: "As an officer for Music for Charity at UW, I helped organize events such as Nursing Home Performances, member meetings, and orchestral concerts to bring together the UW community and raise money for communities in need.",
-    //   image: "",
-    //   tags: ["Leadership", "Piano", "Charity", "Volunteering"],
-    //   group: "other",
-    //   links: [
-    //     {
-    //       name: "Website",
-    //       url: "https://muscharity.wordpress.com/"
-    //     },
-    //     {
-    //       name: "Youtube",
-    //       url: "https://www.youtube.com/@muscharityuw"
-    //     }
-    //   ]
-    // },
+    {
+      title: "Hack UPC Hackathon: Loginly",
+      date: [[5, 2021], [5, 2021]],
+      description: "Developed the front-end webpage for a facial recognition login system, Loginly. Together with a team of developers from around the world, we created and submitted a complete login system solely off of facial recognition software.",
+      skills: [
+        SKILLS.html,
+        SKILLS.css,
+        { name: "Bootstrap 4" },
+      ],
+      group: ProjectGroup.software,
+      links: [
+        {
+          text: "Github",
+          url: "https://github.com/EncryptEx/loginly"
+        }
+      ]
+    },
+    {
+      title: "Music for Charity",
+      date: [[6, 2022], [6, 2024]],
+      description: "As an officer for Music for Charity at UW, I helped organize events such as Nursing Home Performances, member meetings, and orchestral concerts to bring together the UW community and raise money for communities in need.",
+      skills: [
+        { name: "Leadership" },
+        { name: "Piano" },
+        { name: "Charity" },
+        { name: "Volunteering" },
+      ],
+      group: ProjectGroup.other,
+      links: [
+        {
+          text: "Website",
+          url: "https://muscharity.wordpress.com/"
+        },
+        {
+          text: "Youtube",
+          url: "https://www.youtube.com/@muscharityuw"
+        }
+      ]
+    },
   ]
 };
 

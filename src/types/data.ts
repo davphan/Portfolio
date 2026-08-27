@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface SkillCardData {
   title: string,
   skills: SkillData[],
@@ -5,7 +7,7 @@ export interface SkillCardData {
 
 export interface SkillData {
   name: string,
-  icon?: string,
+  icon?: ReactNode,
 }
 
 export type date = [month: number, year: number];
@@ -17,6 +19,7 @@ export interface ExperienceCardData {
   description: string,
   date: dateRange,
   skills: SkillData[],
+  img?: string,
 }
 
 export const ProjectGroup = {
