@@ -24,11 +24,12 @@ export function Text({ children }: { children: ReactNode }) {
   );
 }
 
-export function SectionHeader({ title, description }: { title: ReactNode, description: string }) {
+export function SectionHeader({ title, description, children }: { title: ReactNode, description: string, children?: ReactNode }) {
   return (
     <div className="sticky top-16 z-20 relative flex w-full flex-col items-center gap-4 bg-background/95 pt-6 pb-4 text-center backdrop-blur-sm">
       <SectionTitle>{title}</SectionTitle>
       <Text>{description}</Text>
+      {children}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-full h-8 bg-background/95 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,black,transparent)]"

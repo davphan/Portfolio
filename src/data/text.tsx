@@ -328,7 +328,7 @@ export const PROJECTS_SECTION: {
   description: string,
   cards: ProjectsCardData[]
 } = {
-  description: "Various personal projects that have expanded my own skillsets. Sort by category or tags, click on each project to expand it for more details, and click on project links for more resources like blog posts or github repos.",
+  description: "Personal projects spanning software, hardware, and beyond.",
   cards: [
     {
       title: "ENGINE Capstone: Drone Detect",
