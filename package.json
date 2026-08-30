@@ -28,7 +28,7 @@
     "start": "node dist/index.js",
     "build": "tsc -b && vite build",
     "build-all": "npm run build-resume && npm run build-cv && npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build-resume": "npm run resume-replace-date && latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/resume.tex",
     "build-cv": "latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/cv.tex",
     "resume-replace-date": "sed -i -E \"s/(Last updated in)(\\s+\\w+){2}/\\1 $(date +'%B %Y')/g\" src/data/resume/resume.tex",
