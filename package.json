@@ -1,59 +1,53 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "davphan-portfolio",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "homepage": "http://davphan.github.io/Portfolio",
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.16.1",
-    "@mui/lab": "^5.0.0-alpha.172",
-    "@mui/material": "^5.16.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "devicons-react": "^1.3.0",
-    "emailjs": "^4.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "^5.0.1",
-    "styled-components": "^6.1.11",
-    "typewriter-effect": "^2.21.0",
-    "web-vitals": "^2.1.4"
+    "@fontsource-variable/inter": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "devicons-react": "^1.5.0",
+    "lucide-react": "^1.17.0",
+    "radix-ui": "^1.5.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-icons": "^5.7.0",
+    "shadcn": "^4.10.0",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.0",
+    "tw-animate-css": "^1.4.0",
+    "typewriter-effect": "^2.22.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "node dist/index.js",
+    "build": "tsc -b && vite build",
+    "build-all": "npm run build-resume && npm run build-cv && npm run build",
+    "deploy": "gh-pages -d dist",
     "build-resume": "npm run resume-replace-date && latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/resume.tex",
     "build-cv": "latexmk -pdf -outdir=src/data/resume -auxdir=build/latex src/data/resume/cv.tex",
-    "build": "npm run build-resume && npm run build-cv && react-scripts build",
     "resume-replace-date": "sed -i -E \"s/(Last updated in)(\\s+\\w+){2}/\\1 $(date +'%B %Y')/g\" src/data/resume/resume.tex",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.13.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.1.1",
+    "globals": "^17.6.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.16"
   }
 }
