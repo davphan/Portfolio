@@ -36,6 +36,9 @@ dist
 dist-ssr
 *.local
 
+# LaTeX build byproducts
+*.synctex.gz
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
