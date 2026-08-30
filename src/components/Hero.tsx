@@ -5,9 +5,10 @@ import { Container } from "./layout";
 import { cn } from "@/lib/utils";
 import headshot from "@/assets/headshot.jpg";
 import resumePdf from "@/data/resume/resume.pdf?url";
+import cvPdf from "@/data/resume/cv.pdf?url";
 import { HeroTitle, Text } from "./typography";
 import TypewriterComponent from "typewriter-effect";
-import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 
 function ScrollCue() {
   const [atTop, setAtTop] = useState(true);
@@ -65,9 +66,9 @@ export default function Hero() {
             </a>
           </Button>
           <Button size="lg" variant="outline" className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md" asChild>
-            <a href="#projects">
-              View My Work
-              <ArrowRight />
+            <a href={cvPdf} target="_blank" rel="noreferrer">
+              Open CV
+              <ExternalLink />
             </a>
           </Button>
         </div>
